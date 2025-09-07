@@ -1,5 +1,5 @@
 @use "sass:math";
-
+@use "sass:map";
 // Breakpoints, dimension, container, row, column, v.v
 $grid-breakpoints: (
   xs: 0,
@@ -114,7 +114,7 @@ $gutters: (
 }
 
 @each $breakpoint, $dimension in $grid-breakpoints {
-  $max-width: map-get($container-max-widths, $breakpoint);
+  $max-width: map.get($container-max-widths, $breakpoint);
   $is-xs: $breakpoint == xs;
   $infix: if($is-xs, "", "-#{$breakpoint}");
 

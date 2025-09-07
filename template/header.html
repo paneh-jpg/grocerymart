@@ -1,25 +1,84 @@
-<div class="top-bar">
-  <!-- Logo  -->
-  <div class="logo">
-    <img src="./assets/img/logo.svg" alt="Grocery Mart" class="logo__img" />
-    <p class="logo__title">grocerymart</p>
-  </div>
+<div class="container">
+  <div class="top-bar">
+    <!-- Logo  -->
+    <div class="logo">
+      <img src="./assets/icon/logo.svg" alt="Grocery Mart" class="logo__img" />
+      <p class="logo__title">grocerymart</p>
+    </div>
 
-  <!-- Navbar  -->
-  <nav class="navbar">
-    <ul>
-      <li>
-        <a href="#!" class="navbar__link">Departments</a>
-        <img src="./assets/img/narrow-down.svg" alt="" class="navbar__narrow" />
-      </li>
-      <li>
-        <a href="#!" class="navbar__link">Grocery</a>
-        <img src="./assets/img/narrow-down.svg" alt="" class="navbar__narrow" />
-      </li>
-      <li>
-        <a href="#!" class="navbar__link">Beauty</a>
-        <img src="./assets/img/narrow-down.svg" alt="" class="navbar__narrow" />
-      </li>
-    </ul>
-  </nav>
+    <!-- Navbar  -->
+    <nav class="navbar">
+      <ul class="navbar__list">
+        <li class="navbar__link">
+          <a href="#!">Departments</a>
+          <img
+            src="./assets/icon/narrow-down.svg"
+            alt=""
+            class="navbar__narrow"
+          />
+        </li>
+        <li class="navbar__link">
+          <a href="#!">Grocery</a>
+          <img
+            src="./assets/icon/narrow-down.svg"
+            alt=""
+            class="navbar__narrow"
+          />
+        </li>
+        <li class="navbar__link">
+          <a href="#!">Beauty</a>
+          <img
+            src="./assets/icon/narrow-down.svg"
+            alt=""
+            class="navbar__narrow"
+          />
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Actions  -->
+    <div class="top-act">
+      <!-- Action group 1  -->
+      <div class="top-act__group top-act__group--single">
+        <!-- Search button  -->
+        <button class="top-act__btn">
+          <img
+            src="./assets/icon/search.svg"
+            alt="Search"
+            class="top-act__icon"
+          />
+        </button>
+      </div>
+
+      <!-- Action Group 2  -->
+      <div class="top-act__group">
+        <!-- Wishlist button  -->
+        <button class="top-act__btn">
+          <img
+            src="./assets/icon/wishlist.svg"
+            alt="Wishlist"
+            class="top-act__icon"
+          />
+          <span class="top-act__title">03</span>
+        </button>
+
+        <div class="top-act__separate"></div>
+
+        <!-- Cart Button  -->
+        <button class="top-act__btn">
+          <img src="./assets/icon/cart.svg" alt="" class="top-act__icon" />
+          <span class="top-act__title">$65.42</span>
+        </button>
+      </div>
+
+      <!-- User Avatar  -->
+      <div class="top-act__user">
+        <img
+          src="./assets/img/uifaces-human-avatar.jpg"
+          alt="User Avatar"
+          class="top-act__avatar"
+        />
+      </div>
+    </div>
+  </div>
 </div>
