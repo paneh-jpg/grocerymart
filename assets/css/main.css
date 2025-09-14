@@ -1399,7 +1399,7 @@ input {
   gap: 14px;
 }
 .menu-column + .menu-column {
-  margin-top: 20px;
+  margin-top: 20.5px;
 }
 .menu-column__icon {
   flex-shrink: 0;
@@ -1439,11 +1439,11 @@ input {
 .menu-column__list {
   margin-top: 15px;
 }
-.menu-column__item:hover .sub-menu {
+.menu-column__item--active .sub-menu {
   opacity: 1;
   visibility: visible;
 }
-.menu-column__item:hover > .menu-column__link {
+.menu-column__item:hover > .menu-column__link, .menu-column__item--active > .menu-column__link {
   color: #0071dc;
   font-weight: 500;
 }

@@ -47,7 +47,7 @@
   gap: 14px;
 
   + .menu-column {
-    margin-top: 20px;
+    margin-top: 20.5px;
   }
 
   &__icon {
@@ -98,11 +98,12 @@
   }
 
   &__item {
-    &:hover .sub-menu {
+    &--active .sub-menu {
       opacity: 1;
       visibility: visible;
     }
-    &:hover > .menu-column__link {
+    &:hover > .menu-column__link,
+    &--active > .menu-column__link {
       color: #0071dc;
       font-weight: 500;
     }
