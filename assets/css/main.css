@@ -1362,7 +1362,7 @@ input {
   padding-top: 54px;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 400ms, visibility 400ms;
+  transition: opacity 0.2s, visibility 0.2s;
   width: min(1240px, 100%);
 }
 .dropdown__inner {
@@ -1440,8 +1440,7 @@ input {
   margin-top: 15px;
 }
 .menu-column__item--active .sub-menu {
-  opacity: 1;
-  visibility: visible;
+  display: grid;
 }
 .menu-column__item:hover > .menu-column__link, .menu-column__item--active > .menu-column__link {
   color: #0071dc;
@@ -1457,14 +1456,11 @@ input {
 .sub-menu {
   position: absolute;
   inset: 0 0 0 var(--main-column-width);
-  display: grid;
+  display: none;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--inner-padding);
   padding-left: var(--inner-padding);
   overflow-y: auto;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.5s, visibility 0.5s;
 }
 
 html.dark {
