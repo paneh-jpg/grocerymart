@@ -11,11 +11,12 @@ html {
   --top-act-group-shadow: rgba(237, 237, 246, 0.2);
   --top-act-group-separate: #ededf6;
 
-  @include abstracts.breakpoint(lg) {
-    --header-bg-color: #fff;
-  }
-
   // Dropdown
   --dropdown-bg-color: #fff;
   --dropdown-shadow-color: rgba(200, 200, 200, 0.4);
+  --top-menu-border-color: #d2d1d6;
+
+  @include abstracts.breakpoint(lg) {
+    --header-bg-color: #fff;
+  }
 }
