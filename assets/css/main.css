@@ -1212,6 +1212,11 @@ input {
 .header {
   background-color: var(--header-bg-color);
 }
+@media (max-width: 991.98px) {
+  .header {
+    box-shadow: 0 20px 60px 10px var(--header-shadow-color);
+  }
+}
 
 .top-bar {
   position: relative;
@@ -1222,7 +1227,7 @@ input {
     padding: 20px 0;
   }
 }
-@media (max-width: 575.98px) {
+@media (max-width: 767.98px) {
   .top-bar {
     justify-content: space-between;
     padding: 16px 0;
@@ -1239,23 +1244,17 @@ input {
 }
 
 .navbar {
-  margin-left: 144px;
+  margin-left: 129px;
 }
 @media (max-width: 1199.98px) {
   .navbar {
-    margin-left: 50px;
+    margin-left: 28px;
   }
 }
 @media (max-width: 991.98px) {
   .navbar {
     display: none;
   }
-}
-.navbar__item:first-child a {
-  padding-left: 0;
-}
-.navbar__item:last-child a {
-  padding-right: 0;
 }
 .navbar__item:hover .dropdown {
   opacity: 1;
@@ -1277,7 +1276,7 @@ input {
   gap: 20px;
   margin-left: auto;
 }
-@media (max-width: 575.98px) {
+@media (max-width: 767.98px) {
   .top-act {
     margin-left: 0;
   }
@@ -1336,7 +1335,7 @@ input {
     margin-left: 40px;
   }
 }
-@media (max-width: 575.98px) {
+@media (max-width: 767.98px) {
   .logo {
     margin-left: 0;
   }
@@ -1367,9 +1366,11 @@ input {
   width: min(1240px, 100%);
 }
 .dropdown__inner {
-  max-height: min(582px, 100vh - 158px);
+  --inner-max-height: min(582px, 100vh - 158px);
+  --inner-padding: 30px;
+  max-height: var(--inner-max-height);
   position: relative;
-  padding: 30px;
+  padding: var(--inner-padding);
   border-radius: 20px;
   background: var(--dropdown-bg-color);
   box-shadow: 0 40px 90px 20px var(--dropdown-shadow-color);
@@ -1384,9 +1385,11 @@ input {
 }
 
 .top-menu {
-  height: 100%;
+  max-height: calc(var(--inner-max-height) - var(--inner-padding) * 2);
 }
 .top-menu__main {
+  max-height: inherit;
+  overflow-y: auto;
   width: 292px;
   height: 100%;
   border-right: 1px solid var(--top-menu-border-color);
@@ -1415,6 +1418,7 @@ input {
   position: absolute;
   right: 0;
   bottom: 0;
+  filter: var(--menu-column-icon-color);
 }
 .menu-column__icon-1, .menu-column__icon-2 {
   object-fit: cover;
@@ -1430,7 +1434,7 @@ input {
 }
 .menu-column__link {
   display: block;
-  padding: 7px 0;
+  padding: 5.5px 0;
   font-size: 1.4rem;
   line-height: 142.857%;
 }
@@ -1453,6 +1457,13 @@ html.dark {
   --dropdown-arrow-color: brightness(0) saturate(100%) invert(17%) sepia(9%)
     saturate(1413%) hue-rotate(186deg) brightness(94%) contrast(87%);
   --top-menu-border-color: #171c28;
+  --menu-column-icon-color: brightness(0) saturate(100%) invert(99%) sepia(36%)
+    saturate(299%) hue-rotate(180deg) brightness(100%) contrast(97%);
+}
+@media (max-width: 991.98px) {
+  html.dark {
+    --header-shadow-color: rgba(0, 0, 0, 0.2);
+  }
 }
 
 html {
@@ -1471,6 +1482,7 @@ html {
 @media (max-width: 991.98px) {
   html {
     --header-bg-color: #fff;
+    --header-shadow-color: rgba(237, 237, 246, 0.2);
   }
 }
 

@@ -8,9 +8,12 @@
   width: min(1240px, 100%);
 
   &__inner {
-    max-height: min(582px, 100vh - 158px);
+    --inner-max-height: min(582px, 100vh - 158px);
+    --inner-padding: 30px;
+
+    max-height: var(--inner-max-height);
     position: relative;
-    padding: 30px;
+    padding: var(--inner-padding);
     border-radius: 20px;
     background: var(--dropdown-bg-color);
     box-shadow: 0 40px 90px 20px var(--dropdown-shadow-color);
@@ -27,9 +30,11 @@
 }
 
 .top-menu {
-  height: 100%;
+  max-height: calc(var(--inner-max-height) - var(--inner-padding) * 2);
 
   &__main {
+    max-height: inherit;
+    overflow-y: auto;
     width: 292px;
     height: 100%;
     border-right: 1px solid var(--top-menu-border-color);
@@ -62,6 +67,8 @@
     position: absolute;
     right: 0;
     bottom: 0;
+
+    filter: var(--menu-column-icon-color);
   }
 
   &__icon-1,
@@ -83,7 +90,7 @@
 
   &__link {
     display: block;
-    padding: 7px 0;
+    padding: 5.5px 0;
     font-size: 1.4rem;
     line-height: 142.857%;
 
