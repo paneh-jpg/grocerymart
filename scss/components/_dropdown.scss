@@ -94,7 +94,6 @@
 
     @include abstracts.breakpoint(lg) {
       display: block;
-      margin-top: 10px;
     }
   }
 
@@ -130,7 +129,7 @@
     line-height: 150%;
 
     @include abstracts.breakpoint(lg) {
-      margin-bottom: 26px;
+      margin-bottom: 17px;
     }
   }
 
@@ -187,5 +186,10 @@
     grid-template-columns: repeat(4, 1fr);
     height: var(--max-inner-height);
     padding-left: 0;
+
+    @include abstracts.breakpoint(lg) {
+      grid-template-columns: 1fr;
+      height: auto;
+    }
   }
 }
