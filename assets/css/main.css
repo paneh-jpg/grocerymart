@@ -1384,6 +1384,7 @@ input {
 
 .top-menu {
   --main-column-width: 292px;
+  --max-inner-height: min(582px, 100vh - 158px);
   position: relative;
 }
 .top-menu__main {
@@ -1461,6 +1462,14 @@ input {
   gap: var(--inner-padding);
   padding-left: var(--inner-padding);
   overflow-y: auto;
+}
+.sub-menu--not-main {
+  inset: initial;
+  position: initial;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: var(--max-inner-height);
+  padding-left: 0;
 }
 
 html.dark {
