@@ -1387,6 +1387,12 @@ input {
   .navbar__item {
     width: 100%;
   }
+  .navbar__item:hover .dropdown {
+    display: none;
+  }
+  .navbar__item--active .dropdown {
+    display: block !important;
+  }
 }
 .navbar__link {
   display: flex;
@@ -1406,6 +1412,15 @@ input {
 }
 .navbar__narrow {
   margin-top: 3px;
+}
+@media (max-width: 991.98px) {
+  .navbar__narrow {
+    rotate: -90deg;
+    transition: rotate 0.3s;
+  }
+}
+.navbar__item--active .navbar__narrow {
+  rotate: 0deg;
 }
 
 .top-act {
@@ -1496,7 +1511,6 @@ input {
 }
 @media (max-width: 991.98px) {
   .dropdown {
-    display: block;
     position: initial;
     padding-top: 0;
   }

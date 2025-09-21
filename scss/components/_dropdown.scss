@@ -9,7 +9,6 @@
   display: none;
 
   @include abstracts.breakpoint(lg) {
-    display: block;
     position: initial;
     padding-top: 0;
   }
