@@ -20,9 +20,27 @@
 
     <!-- Navbar  -->
     <nav class="navbar show" id="navbar">
+      <!-- Toggle Button  -->
       <button class="navbar__close-btn js-toggle" toggle-target="#navbar">
-        <img src="./assets/icon/arrow-left.svg" alt="" />
+        <img src="./assets/icon/arrow-left.svg" alt="" class="icon" />
       </button>
+
+      <a href="#!" class="nav-btn d-none d-md-flex">
+        <img src="./assets/icon/cart.svg" alt="" class="nav-btn__icon icon" />
+        <span class="nav-btn__title">Card</span>
+        <span class="nav-btn__qnt">3</span>
+      </a>
+
+      <a href="#!" class="nav-btn d-none d-md-flex">
+        <img
+          src="../assets/icon/wishlist.svg"
+          alt=""
+          class="nav-btn__icon icon"
+        />
+        <span class="nav-btn__title">Favorite</span>
+        <span class="nav-btn__qnt">3</span>
+      </a>
+
       <ul class="navbar__list js-dropdown-list">
         <!-- Navbar Item 1 -->
         <li class="navbar__item js-department-link">
