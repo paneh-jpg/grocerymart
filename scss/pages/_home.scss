@@ -14,10 +14,10 @@
     font-size: 2.4rem;
     font-weight: 700;
     line-height: 141.667%;
-    margin-bottom: 20px;
   }
 
   &__cate {
+    margin-top: 20px;
     --grid-gutter-x: 51px;
 
     @include abstracts.screen(lg) {
@@ -27,5 +27,13 @@
     @include abstracts.screen(md) {
       --grid-gutter-y: 20px;
     }
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 20px;
   }
 }

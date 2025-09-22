@@ -29,6 +29,18 @@ html.dark {
   --cate-thumb-bg: #292e39;
   --item-text-color: #fff;
 
+  // Filter button
+  --filter-btn-color: #fff;
+  --filter-btn-bg: #171c28;
+
+  //Like Button
+  --like-btn-bg: #292e39;
+  --like-btn-shadow: rgba(124, 124, 124, 0.2);
+
+  //Product Card
+  --product-card-bg: #171c28;
+  --product-card-shadow: rgba(0, 0, 0, 0.2);
+
   @include abstracts.screen(lg) {
     --header-shadow-color: rgba(0, 0, 0, 0.2);
   }
