@@ -9,7 +9,7 @@ $grid-breakpoints: (
   xxl: 1400px,
 );
 
-@mixin breakpoint($key) {
+@mixin screen($key) {
   $breakpoint: map.get(
     $map: $grid-breakpoints,
     $key: $key,
