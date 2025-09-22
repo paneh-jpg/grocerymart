@@ -20,8 +20,17 @@ html {
   --sidebar-bg: #fff;
   --sidebar-shadow: rgba(200, 200, 200, 0.4);
 
+  //Category Item
+  --cate-item-bg: #eee;
+  --cate-thumb-bg: #fff;
+  --item-text-color: #000;
+
   @include abstracts.screen(lg) {
     --header-bg-color: #fff;
     --header-shadow-color: rgba(237, 237, 246, 0.2);
+  }
+
+  @include abstracts.screen(md) {
+    --cate-item-bg: #fff;
   }
 }
