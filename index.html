@@ -31,12 +31,44 @@
     <script src="./assets/js/scripts.js"></script>
   </head>
   <body>
+    <!-- Header  -->
     <header class="header" id="header"></header>
     <script>
       load("header", "./templates/header.html");
     </script>
     <div class="container">
-      <h1>Body</h1>
+      <!-- Slideshow -->
+      <div class="slideshow">
+        <div class="slideshow__inner">
+          <div class="slideshow__item">
+            <img
+              src="./assets/img/slideshow/Item-1.png"
+              alt="ORDER YOUR FAVORITE COFFEE"
+              class="slideshow__img"
+            />
+          </div>
+          <div class="slideshow__item">
+            <img
+              src="./assets/img/slideshow/Item-1.png"
+              alt="ORDER YOUR FAVORITE COFFEE"
+              class="slideshow__img"
+            />
+          </div>
+          <div class="slideshow__item">
+            <img
+              src="./assets/img/slideshow/Item-1.png"
+              alt="ORDER YOUR FAVORITE COFFEE"
+              class="slideshow__img"
+            />
+          </div>
+        </div>
+
+        <div class="slideshow__page">
+          <span class="slideshow__num">1</span>
+          <span class="slideshow__slider"></span>
+          <span class="slideshow__num">5</span>
+        </div>
+      </div>
 
       <footer id="footer"></footer>
       <script>
