@@ -167,16 +167,19 @@
                 <div class="filter__row">
                   <!-- Filter Column 1  -->
                   <div class="filter__col">
-                    <label for="" class="filter-form__label">Price</label>
+                    <label for="" class="filter__form-label">Price</label>
                     <div class="filter-form__group">
-                      <div class="filter-form__slider"></div>
+                      <div
+                        class="filter__form-slider"
+                        style="--min-value: 10%; --max-value: 60%"
+                      ></div>
                     </div>
 
-                    <div class="filter-form__group filter-form__group--inline">
+                    <div class="filter__form-group filter__form-group--inline">
                       <div>
                         <label
                           for=""
-                          class="filter-form__label filter-form__label--small"
+                          class="filter__form-label filter__form-label--small"
                         >
                           Minimum
                         </label>
@@ -185,14 +188,15 @@
                           name=""
                           value="$30.00"
                           id=""
-                          class="filter-form__input"
+                          class="filter__form-input"
+                          readonly
                         />
                       </div>
 
                       <div>
                         <label
                           for=""
-                          class="filter-form__label filter-form__label--small"
+                          class="filter__form-label filter__form-label--small"
                         >
                           Maximum
                         </label>
@@ -201,7 +205,8 @@
                           name=""
                           value="$100.00"
                           id=""
-                          class="filter-form__input"
+                          class="filter__form-input"
+                          readonly
                         />
                       </div>
                     </div>
