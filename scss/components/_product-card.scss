@@ -6,6 +6,12 @@
   background: var(--product-card-bg);
   box-shadow: 0 20px 60px 10px var(--product-card-shadow);
 
+  transition: box-shadow 0.5s;
+
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+
   &__img-wrap {
     position: relative;
     padding-top: 100%;
