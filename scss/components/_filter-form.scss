@@ -7,12 +7,19 @@
 
 .filter {
   position: absolute;
-  top: 50px;
-  right: 100%;
+  top: 55px;
+  right: 0;
   background-color: var(--filter-form-bg);
   filter: drop-shadow(0 40px 90px var(--filter-form-shadow));
   border-radius: 20px;
   padding: 30px;
+
+  &__arrow {
+    position: absolute;
+    top: -15px;
+    right: 24px;
+    height: 20.5px;
+  }
 
   &__form {
     margin-top: 30px;
@@ -188,5 +195,25 @@
     // height: 162px;
     background: #eee;
     margin: 0 30px;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 32px;
+  }
+
+  &__cancel,
+  &__submit {
+    height: 38px;
+    padding: 0 10px;
+  }
+
+  &__cancel {
+    font-size: 1.5rem;
+  }
+
+  &__submit {
+    font-size: 1.4rem;
   }
 }

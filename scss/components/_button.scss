@@ -44,3 +44,52 @@
     margin-top: 6px;
   }
 }
+
+// Buttons
+.btn {
+  height: 46px;
+  padding: 0 20px;
+  border-radius: 6px;
+  transition: opacity 0.5s, box-shadow 0.5s;
+
+  background: #f8f8fb;
+
+  font-size: 1.8rem;
+  font-weight: 500;
+  user-select: none;
+
+  + .btn {
+    margin-left: 20px;
+  }
+
+  &--text {
+    color: #9e9da8;
+    background: transparent;
+    font-weight: 400;
+  }
+
+  &--primary {
+    background: #ffb700;
+  }
+
+  &--outline {
+    background: transparent;
+    border: 1px solid #d2d1d6;
+  }
+
+  &--rounded {
+    border-radius: 99px;
+  }
+
+  &[disabled],
+  &--disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  &:hover {
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px,
+      rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+    opacity: 0.9;
+  }
+}
