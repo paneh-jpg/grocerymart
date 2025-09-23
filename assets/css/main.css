@@ -172,6 +172,8 @@ input {
   color: inherit;
   -webkit-tap-highlight-color: transparent;
   outline: none;
+  border: none;
+  padding: 0;
 }
 
 .icon {
@@ -2052,18 +2054,40 @@ input {
 .filter__form-slider::after {
   left: var(--max-value);
 }
-.filter__form-select-wrap, .filter__form-input {
+.filter__form-select-wrap, .filter__form-text-input {
   border-radius: 6px;
   border: 1px solid #d2d1d6;
 }
-.filter__form-input {
+.filter__form-text-input {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  width: 334px;
+  height: 44px;
+}
+.filter__form-text-input--small {
   width: 121px;
-  padding: 0 12px;
-  background: var(--filter-form-bg);
   height: 36px;
+  padding: 8px 12px;
+}
+.filter__form-text-input--small .filter__form-input {
   font-size: 1.4rem;
+}
+.filter__form-input {
+  width: 100%;
+  font-size: 1.5rem;
   font-weight: 500;
-  line-height: 142.857%;
+  line-height: 146.667%;
+  background-color: var(--filter-form-bg);
+}
+.filter__form-input::placeholder {
+  color: #9e9da8;
+  font-weight: 400;
+}
+.filter__form-input-icon {
+  padding-left: 10px;
 }
 .filter__form-select-wrap {
   display: flex;

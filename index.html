@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -183,13 +183,17 @@
                         >
                           Minimum
                         </label>
-                        <input
-                          type="text"
-                          name=""
-                          value="$30.00"
-                          id=""
-                          class="filter__form-input"
-                        />
+                        <div
+                          class="filter__form-text-input filter__form-text-input--small"
+                        >
+                          <input
+                            type="text"
+                            name=""
+                            value="$30.00"
+                            id=""
+                            class="filter__form-input"
+                          />
+                        </div>
                       </div>
 
                       <div>
@@ -199,13 +203,17 @@
                         >
                           Maximum
                         </label>
-                        <input
-                          type="text"
-                          name=""
-                          value="$100.00"
-                          id=""
-                          class="filter__form-input"
-                        />
+                        <div
+                          class="filter__form-text-input filter__form-text-input--small"
+                        >
+                          <input
+                            type="text"
+                            name=""
+                            value="$100.00"
+                            id=""
+                            class="filter__form-input"
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -250,7 +258,31 @@
 
                   <!-- Filter Column 3  -->
                   <div class="filter__col">
-                    <!-- <label for="" class="filter__form-label">Brand</label> -->
+                    <label for="" class="filter__form-label">Brand</label>
+                    <div class="filter__form-group">
+                      <div class="filter__form-text-input">
+                        <input
+                          class="filter__form-input"
+                          type="text"
+                          name=""
+                          placeholder="Search brand name"
+                          id=""
+                        />
+                        <img
+                          src="./assets/icon/search.svg"
+                          alt=""
+                          class="filter__form-input-icon icon"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="filter__form-group">
+                      <div class="filter__form-tags">
+                        <div class="filter__form-tag">Lavazza</div>
+                        <div class="filter__form-tag">Nescafe</div>
+                        <div class="filter__form-tag">Starbucks</div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </form>
