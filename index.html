@@ -168,7 +168,7 @@
                   <!-- Filter Column 1  -->
                   <div class="filter__col">
                     <label for="" class="filter__form-label">Price</label>
-                    <div class="filter-form__group">
+                    <div class="filter__form-group">
                       <div
                         class="filter__form-slider"
                         style="--min-value: 10%; --max-value: 60%"
@@ -189,7 +189,6 @@
                           value="$30.00"
                           id=""
                           class="filter__form-input"
-                          readonly
                         />
                       </div>
 
@@ -206,20 +205,52 @@
                           value="$100.00"
                           id=""
                           class="filter__form-input"
-                          readonly
                         />
                       </div>
                     </div>
                   </div>
 
+                  <div class="filter__separate"></div>
+
                   <!-- Filter Column 2  -->
                   <div class="filter__col">
-                    <!-- <label for="" class="filter-form__label">Size/Weight</label> -->
+                    <label for="" class="filter__form-label">Size/Weight</label>
+                    <div class="filter__form-group">
+                      <div class="filter__form-select-wrap">
+                        <div class="filter__form-select" style="--width: 158px">
+                          <span>500g</span>
+                          <img
+                            src="./assets/icon/filter-narrow.svg"
+                            alt=""
+                            class="filter__form-select-arrow icon"
+                          />
+                        </div>
+
+                        <div class="filter__form-select">
+                          <span>Gram</span>
+                          <img
+                            src="./assets/icon/filter-narrow.svg"
+                            alt=""
+                            class="filter__form-select-arrow icon"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="filter__form-group">
+                      <div class="filter__form-tags">
+                        <div class="filter__form-tag">Small</div>
+                        <div class="filter__form-tag">Medium</div>
+                        <div class="filter__form-tag">Large</div>
+                      </div>
+                    </div>
                   </div>
+
+                  <div class="filter__separate"></div>
 
                   <!-- Filter Column 3  -->
                   <div class="filter__col">
-                    <!-- <label for="" class="filter-form__label">Brand</label> -->
+                    <!-- <label for="" class="filter__form-label">Brand</label> -->
                   </div>
                 </div>
               </form>

@@ -2027,16 +2027,6 @@ input {
   flex-direction: column;
   gap: 10px;
 }
-.filter__form-input {
-  width: 121px;
-  padding: 0 12px;
-  border-radius: 6px;
-  border: 1px solid #d2d1d6;
-  height: 36px;
-  font-size: 1.4rem;
-  font-weight: 500;
-  line-height: 142.857%;
-}
 .filter__form-slider {
   position: relative;
   margin-top: 20px;
@@ -2062,14 +2052,75 @@ input {
 .filter__form-slider::after {
   left: var(--max-value);
 }
+.filter__form-select-wrap, .filter__form-input {
+  border-radius: 6px;
+  border: 1px solid #d2d1d6;
+}
+.filter__form-input {
+  width: 121px;
+  padding: 0 12px;
+  background: var(--filter-form-bg);
+  height: 36px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 142.857%;
+}
+.filter__form-select-wrap {
+  display: flex;
+  align-items: center;
+  height: 45px;
+}
+.filter__form-select {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 14px;
+  min-width: var(--width, 108px);
+  height: calc(100% - 10px);
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 142.857%;
+}
+.filter__form-select + .filter__form-select {
+  border-left: 1px solid #d2d1d6;
+}
+.filter__form-tags {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+}
+.filter__form-tag {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding: 6px 12px;
+  height: 32px;
+  border-radius: 6px;
+  background: var(--filter-form-tag-bg);
+  color: var(--filter-form-tag-text-color);
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 142.857%;
+}
+.filter__form-tag:hover {
+  color: var(--text-color);
+}
 .filter__row {
   display: flex;
-  flex: 1;
 }
 .filter__heading {
   font-size: 2.2rem;
   font-weight: 500;
   line-height: 145.455%;
+}
+.filter__separate {
+  width: 1px;
+  background: #eee;
+  margin: 0 30px;
 }
 
 html.dark {
@@ -2095,6 +2146,9 @@ html.dark {
   --item-text-color: #fff;
   --filter-btn-color: #fff;
   --filter-btn-bg: #171c28;
+  --filter-form-bg: #292e39;
+  --filter-form-shadow: rgba(0, 0, 0, 0.4);
+  --filter-form-tag-bg: #171c28;
   --like-btn-bg: #292e39;
   --like-btn-shadow: rgba(124, 124, 124, 0.2);
   --product-card-bg: #171c28;
@@ -2127,6 +2181,8 @@ html {
   --filter-btn-bg: #fff;
   --filter-form-bg: #fff;
   --filter-form-shadow: rgba(200, 200, 200, 0.4);
+  --filter-form-tag-bg: #f8f8fb;
+  --filter-form-tag-text-color: #9e9da8;
   --like-btn-bg: #fff;
   --like-btn-shadow: rgba(124, 124, 124, 0.2);
   --product-card-bg: #fff;
