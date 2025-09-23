@@ -2040,17 +2040,9 @@ input {
   background-color: var(--filter-form-bg);
   filter: drop-shadow(0 40px 90px var(--filter-form-shadow));
   border-radius: 20px;
-  padding: 30px;
+  padding: 30px 0;
   transition: opacity, visibility;
   transition-duration: 0.5s;
-}
-@media (max-width: 1199.98px) {
-  .filter {
-    height: calc(100vh - 80px);
-    overflow-y: auto;
-    overscroll-behavior: contain;
-    padding-bottom: 0;
-  }
 }
 @media (max-width: 575.98px) {
   .filter {
@@ -2084,7 +2076,8 @@ input {
   margin-top: 20px;
 }
 .filter__form-group--inline {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 30px;
 }
 .filter__form-group--inline div {
@@ -2135,7 +2128,7 @@ input {
   height: 36px;
   padding: 8px 12px;
 }
-@media (max-width: 575.98px) {
+@media (max-width: 1199.98px) {
   .filter__form-text-input {
     width: 100%;
   }
@@ -2163,7 +2156,6 @@ input {
   height: 45px;
 }
 .filter__form-select {
-  width: 100%;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -2175,6 +2167,19 @@ input {
   font-weight: 500;
   line-height: 142.857%;
 }
+.filter__form-select-01 {
+  width: 158px;
+}
+@media (max-width: 575.98px) {
+  .filter__form-select-01 {
+    width: 108px;
+  }
+}
+@media (max-width: 1199.98px) {
+  .filter__form-select {
+    flex: 1;
+  }
+}
 .filter__form-select + .filter__form-select {
   border-left: 1px solid #d2d1d6;
 }
@@ -2183,6 +2188,11 @@ input {
   align-items: center;
   flex-wrap: wrap;
   gap: 10px 20px;
+}
+@media (max-width: 1199.98px) {
+  .filter__form-tags {
+    gap: 9px;
+  }
 }
 .filter__form-tag {
   cursor: pointer;
@@ -2220,20 +2230,13 @@ input {
     height: 1px;
     width: 100%;
     margin: 30px 0;
+    flex-shrink: 0;
   }
 }
 .filter__footer {
   display: flex;
   justify-content: flex-end;
   margin-top: 32px;
-}
-@media (max-width: 1199.98px) {
-  .filter__footer {
-    position: sticky;
-    bottom: 0;
-    background: var(--filter-form-bg);
-    padding-bottom: 16px;
-  }
 }
 .filter__cancel, .filter__submit {
   height: 38px;
@@ -2249,6 +2252,14 @@ input {
 }
 .filter__submit {
   font-size: 1.4rem;
+}
+.filter__heading, .filter__content, .filter__footer {
+  padding: 0 30px;
+}
+.filter__content {
+  max-height: calc(100vh - 350px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 @media (max-width: 1199.98px) {
   .filter__content {
