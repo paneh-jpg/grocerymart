@@ -1,0 +1,231 @@
+@use "../abstracts";
+
+.footer {
+  margin-top: 50px;
+  padding: 50px 0;
+  background: var(--footer-bg-color);
+
+  @include abstracts.screen(sm) {
+    padding: 30px 0;
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 2fr 1.3fr repeat(2, 1fr) 1.6fr;
+    gap: 60px;
+
+    @include abstracts.screen(lg) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @include abstracts.screen(sm) {
+      grid-template-columns: 1fr 1fr;
+      gap: 30px 20px;
+    }
+  }
+
+  &__col {
+    &-1 {
+      @include abstracts.screen(lg) {
+        grid-column: span 3;
+      }
+
+      @include abstracts.screen(sm) {
+        grid-column: span 2;
+      }
+    }
+
+    &-3 {
+      @include abstracts.screen(sm) {
+        order: 4;
+      }
+    }
+
+    &-5 {
+      @include abstracts.screen(lg) {
+        grid-column: span 3;
+      }
+
+      @include abstracts.screen(sm) {
+        grid-column: initial;
+      }
+
+      .footer__list {
+        @include abstracts.screen(lg) {
+          display: grid;
+          grid-template-columns: 1.5fr 1fr;
+          gap: 0 20px;
+        }
+
+        @include abstracts.screen(sm) {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__logo.logo {
+    margin-left: 0;
+  }
+
+  &__desc {
+    margin-top: 30px;
+    font-size: 1.5rem;
+    line-height: 1.4;
+  }
+
+  &__help-text {
+    margin-top: 40px;
+    font-size: 1.4rem;
+  }
+
+  &__heading {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 1.8rem;
+
+    @include abstracts.screen(sm) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__list {
+    margin-top: 18px;
+  }
+
+  &__link,
+  &__text {
+    padding: 8px 0;
+    font-size: 1.5rem;
+    line-height: 1.4;
+
+    @include abstracts.screen(sm) {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+
+    &:hover {
+      color: #0071dc;
+      text-decoration: underline;
+    }
+  }
+
+  &__text,
+  &__copyright {
+    color: var(--footer-text-color);
+  }
+
+  &__label {
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 1.6rem;
+  }
+
+  &__form {
+    padding: 16px 0;
+    display: flex;
+    gap: 10px;
+
+    .btn {
+      font-size: 1.5rem;
+    }
+
+    @include abstracts.screen(xl) {
+      flex-direction: column;
+    }
+
+    @include abstracts.screen(lg) {
+      flex-direction: row;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 2px solid #d2d1d5;
+    font-size: 1.5rem;
+    font-weight: 500;
+
+    &::placeholder {
+      font-size: 1.4rem;
+      font-weight: 400;
+    }
+  }
+
+  &__bottom {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include abstracts.screen(sm) {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  &__copyright {
+    font-size: 1.4rem;
+
+    @include abstracts.screen(sm) {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+      rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    filter: grayscale(50%) brightness(95%);
+    transition: translate 0.5s;
+
+    &--facebook {
+      background-color: #1877f2;
+    }
+
+    &--youtube {
+      background: #ff0000;
+    }
+
+    &--tiktok {
+      background: black;
+    }
+
+    &--twitter {
+      background-color: #1da1f2;
+    }
+
+    &--linkedin {
+      background-color: #0a66c2;
+    }
+
+    &:hover {
+      filter: grayscale(0);
+      translate: 0 -3px;
+      opacity: 0.9;
+    }
+  }
+
+  &__social-icon {
+    width: 22px;
+    height: 22px;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7490%)
+      hue-rotate(318deg) brightness(100%) contrast(103%);
+  }
+}
