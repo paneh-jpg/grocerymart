@@ -14,8 +14,14 @@
     align-items: center;
   }
 
+  &__intro,
+  &__content {
+    padding: 0 30px;
+  }
+
   &__intro {
     background: var(--auth-intro-bg);
+    position: relative;
     &-text {
       margin-top: 49px;
       text-align: center;
@@ -24,6 +30,29 @@
       font-size: 1.8rem;
       font-weight: 500;
       line-height: 144.444%;
+
+      @include abstracts.screen(md) {
+        max-width: 100%;
+      }
+    }
+
+    &-img {
+      max-width: 100%;
+    }
+
+    &-logo,
+    &-next {
+      position: absolute;
+      left: 50%;
+      translate: -50% 0;
+    }
+
+    &-logo {
+      top: 80px;
+    }
+
+    &-next {
+      bottom: 56px;
     }
   }
 
@@ -33,6 +62,22 @@
     &-inner {
       width: min(460px, 100%);
       padding: 50px 0;
+
+      .logo {
+        margin-left: 0;
+      }
+    }
+
+    @include abstracts.screen(md) {
+      position: fixed;
+      inset: 0;
+      z-index: 1;
+      transition: translate 0.3s;
+      overflow-y: auto;
+
+      &.hide {
+        translate: 100%;
+      }
     }
   }
 

@@ -1476,6 +1476,12 @@ input {
 @media (max-width: 767.98px) {
   .top-act {
     margin-left: 0;
+    gap: 0;
+  }
+  .top-act__sign-up.btn, .top-act__sign-in.btn {
+    height: 40px;
+    padding: 0 8px;
+    font-size: 1.5rem;
   }
 }
 .top-act__group {
@@ -2685,8 +2691,12 @@ html {
   justify-content: center;
   align-items: center;
 }
+.auth__intro, .auth__content {
+  padding: 0 30px;
+}
 .auth__intro {
   background: var(--auth-intro-bg);
+  position: relative;
 }
 .auth__intro-text {
   margin-top: 49px;
@@ -2697,12 +2707,46 @@ html {
   font-weight: 500;
   line-height: 144.444%;
 }
+@media (max-width: 767.98px) {
+  .auth__intro-text {
+    max-width: 100%;
+  }
+}
+.auth__intro-img {
+  max-width: 100%;
+}
+.auth__intro-logo, .auth__intro-next {
+  position: absolute;
+  left: 50%;
+  translate: -50% 0;
+}
+.auth__intro-logo {
+  top: 80px;
+}
+.auth__intro-next {
+  bottom: 56px;
+}
 .auth__content {
   background: var(--auth-content-bg);
 }
 .auth__content-inner {
   width: min(460px, 100%);
   padding: 50px 0;
+}
+.auth__content-inner .logo {
+  margin-left: 0;
+}
+@media (max-width: 767.98px) {
+  .auth__content {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    transition: translate 0.3s;
+    overflow-y: auto;
+  }
+  .auth__content.hide {
+    translate: 100%;
+  }
 }
 .auth__heading {
   margin-top: 50px;
