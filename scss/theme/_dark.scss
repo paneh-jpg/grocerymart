@@ -52,6 +52,15 @@ html.dark {
   --product-card-bg: #171c28;
   --product-card-shadow: rgba(0, 0, 0, 0.2);
 
+  //Authentication
+  --auth-intro-bg: #171c28;
+  --auth-content-bg: #292e39;
+  --auth-heading-color: #b9babe;
+  --auth-desc-color: #b9babe;
+
+  //Form
+  --text-input-border-color: #b9babe;
+
   @include abstracts.screen(lg) {
     --header-shadow-color: rgba(0, 0, 0, 0.2);
   }

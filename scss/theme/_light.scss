@@ -47,6 +47,15 @@ html {
   --product-card-bg: #fff;
   --product-card-shadow: rgba(237, 237, 246, 0.2);
 
+  //Authentication
+  --auth-intro-bg: #fafafd;
+  --auth-content-bg: #fff;
+  --auth-heading-color: #1a162e;
+  --auth-desc-color: #9e9da8;
+
+  //Form
+  --text-input-border-color: #d2d1d6;
+
   @include abstracts.screen(lg) {
     --header-bg-color: #fff;
     --header-shadow-color: rgba(237, 237, 246, 0.2);

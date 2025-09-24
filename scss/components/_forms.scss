@@ -1,0 +1,60 @@
+@use "../abstracts";
+
+.form {
+  &__group {
+    margin-top: 30px;
+
+    &--inline {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__text-input {
+    height: 50px;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    border: 1.5px solid var(--text-input-border-color);
+
+    &:focus-within {
+      border-color: #77dae6;
+    }
+  }
+
+  &__input {
+    flex: 1;
+    height: 100%;
+
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 144.444%;
+
+    &::placeholder {
+      color: #d2d1d6;
+    }
+  }
+
+  &__input-icon {
+    margin-left: 12px;
+  }
+
+  &__pull-right {
+    margin-left: auto;
+  }
+
+  &__checkbox {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    &-label {
+      font-size: 1.5rem;
+      font-weight: 500;
+      line-height: 146.667%;
+      color: var(--auth-desc-color);
+    }
+  }
+}
