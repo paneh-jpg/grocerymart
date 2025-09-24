@@ -3,6 +3,8 @@
 .footer {
   margin-top: 50px;
   padding: 50px 0;
+
+  font-size: 1.4rem;
   background: var(--footer-bg-color);
 
   @include abstracts.screen(sm) {
@@ -70,13 +72,11 @@
 
   &__desc {
     margin-top: 30px;
-    font-size: 1.5rem;
     line-height: 1.4;
   }
 
   &__help-text {
     margin-top: 40px;
-    font-size: 1.4rem;
   }
 
   &__heading {
@@ -98,10 +98,6 @@
     padding: 8px 0;
     font-size: 1.5rem;
     line-height: 1.4;
-
-    @include abstracts.screen(sm) {
-      font-size: 1.2rem;
-    }
   }
 
   &__link {
@@ -150,8 +146,11 @@
     font-size: 1.5rem;
     font-weight: 500;
 
+    @include abstracts.screen(md) {
+      font-size: 1.6rem;
+    }
+
     &::placeholder {
-      font-size: 1.4rem;
       font-weight: 400;
     }
   }
@@ -163,16 +162,8 @@
     justify-content: space-between;
 
     @include abstracts.screen(sm) {
-      flex-direction: column;
+      flex-direction: column-reverse;
       gap: 20px;
-    }
-  }
-
-  &__copyright {
-    font-size: 1.4rem;
-
-    @include abstracts.screen(sm) {
-      font-size: 1.2rem;
     }
   }
 
@@ -194,6 +185,11 @@
       rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     filter: grayscale(50%) brightness(95%);
     transition: translate 0.5s;
+
+    @include abstracts.screen(sm) {
+      width: 40px;
+      height: 40px;
+    }
 
     &--facebook {
       background-color: #1877f2;
@@ -227,5 +223,10 @@
     height: 22px;
     filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7490%)
       hue-rotate(318deg) brightness(100%) contrast(103%);
+
+    @include abstracts.screen(sm) {
+      width: 25px;
+      height: 25px;
+    }
   }
 }
