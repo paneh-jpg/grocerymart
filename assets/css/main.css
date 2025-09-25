@@ -2520,6 +2520,11 @@ input {
   display: flex;
   align-items: center;
 }
+@media (max-width: 767.98px) {
+  .form__group {
+    margin-top: 20px;
+  }
+}
 .form__group:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__text-input {
   border-color: #ed4337;
   background: rgba(237, 67, 55, 0.1);
@@ -2564,7 +2569,7 @@ input {
   line-height: 144.444%;
 }
 .form__input::placeholder {
-  color: #d2d1d6;
+  color: var(--form-placeholder-color);
 }
 @media (max-width: 767.98px) {
   .form__input {
@@ -2669,11 +2674,18 @@ html.dark {
   --auth-content-bg: #292e39;
   --auth-heading-color: #b9babe;
   --auth-desc-color: #b9babe;
+  --auth-intro-text-color: #b9babe;
   --text-input-border-color: #b9babe;
+  --form-placeholder-color: #b9babe;
 }
 @media (max-width: 991.98px) {
   html.dark {
     --header-shadow-color: rgba(0, 0, 0, 0.2);
+  }
+}
+@media (max-width: 767.98px) {
+  html.dark {
+    --auth-intro-bg: #292e39;
   }
 }
 
@@ -2709,7 +2721,9 @@ html {
   --auth-content-bg: #fff;
   --auth-heading-color: #1a162e;
   --auth-desc-color: #9e9da8;
+  --auth-intro-text-color: #1a162e;
   --text-input-border-color: #d2d1d6;
+  --form-placeholder-color: #d2d1d6;
 }
 @media (max-width: 991.98px) {
   html {
@@ -2720,6 +2734,7 @@ html {
 @media (max-width: 767.98px) {
   html {
     --cate-item-bg: #fff;
+    --auth-intro-bg: #fff;
   }
 }
 
@@ -2789,6 +2804,7 @@ html {
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 144.444%;
+  color: var(--auth-intro-text-color);
 }
 @media (max-width: 1199.98px) {
   .auth__intro-text {
@@ -2821,13 +2837,13 @@ html {
   width: min(460px, 100%);
   padding: 50px 0;
 }
-.auth__content-inner .logo {
-  margin-left: 0;
-}
 @media (max-width: 767.98px) {
-  .auth__content-inner .logo {
+  .auth__content-inner {
     margin-top: 30px;
   }
+}
+.auth__content-inner .logo {
+  margin-left: 0;
 }
 @media (max-width: 767.98px) {
   .auth__content {
@@ -2850,7 +2866,7 @@ html {
 }
 @media (max-width: 1199.98px) {
   .auth__heading {
-    margin-top: 50px;
+    margin-top: 40px;
   }
 }
 .auth__desc {
@@ -2902,6 +2918,11 @@ html {
 .auth__btn + .auth__btn {
   margin-top: 30px;
 }
+@media (max-width: 767.98px) {
+  .auth__btn + .auth__btn {
+    margin-top: 10px;
+  }
+}
 .auth__text {
   margin-top: 100px;
   color: var(--auth-desc-color);
@@ -2912,7 +2933,7 @@ html {
 @media (max-width: 767.98px) {
   .auth__text {
     font-size: 1.6rem;
-    margin-top: 56px;
+    margin-top: 46px;
   }
 }
 

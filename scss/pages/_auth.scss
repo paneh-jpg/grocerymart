@@ -26,6 +26,7 @@
   &__intro {
     background: var(--auth-intro-bg);
     position: relative;
+
     &-text {
       margin-top: 49px;
       text-align: center;
@@ -34,6 +35,7 @@
       font-size: 1.8rem;
       font-weight: 500;
       line-height: 144.444%;
+      color: var(--auth-intro-text-color);
 
       @include abstracts.screen(xl) {
         max-width: 100%;
@@ -71,11 +73,12 @@
       width: min(460px, 100%);
       padding: 50px 0;
 
+      @include abstracts.screen(md) {
+        margin-top: 30px;
+      }
+
       .logo {
         margin-left: 0;
-        @include abstracts.screen(md) {
-          margin-top: 30px;
-        }
       }
     }
 
@@ -100,7 +103,7 @@
     line-height: 146.667%;
 
     @include abstracts.screen(xl) {
-      margin-top: 50px;
+      margin-top: 40px;
     }
   }
 
@@ -154,6 +157,10 @@
 
   &__btn + &__btn {
     margin-top: 30px;
+
+    @include abstracts.screen(md) {
+      margin-top: 10px;
+    }
   }
 
   &__text {
@@ -165,7 +172,7 @@
 
     @include abstracts.screen(md) {
       font-size: 1.6rem;
-      margin-top: 56px;
+      margin-top: 46px;
     }
   }
 }
