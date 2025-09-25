@@ -1,6 +1,11 @@
 @use "../abstracts";
 
 .form {
+  &:has(:invalid) .form__submit-btn {
+    opacity: 0.5;
+    pointer-events: none !important;
+  }
+
   &__group {
     margin-top: 30px;
 
@@ -8,6 +13,34 @@
       display: flex;
       align-items: center;
     }
+  }
+
+  &__group:has(:invalid):has(&__input:not(:placeholder-shown)) {
+    .form__text-input {
+      border-color: red;
+      background: rgba($color: red, $alpha: 0.1);
+    }
+
+    .form__error-icon {
+      display: inline-flex;
+    }
+
+    .form__error {
+      display: block;
+    }
+
+    .form__input-icon {
+      display: none;
+    }
+  }
+
+  &__error-icon,
+  &__error {
+    display: none;
+  }
+
+  &__error-icon {
+    animation: shake 0.8s;
   }
 
   &__text-input {
@@ -37,8 +70,19 @@
     }
   }
 
-  &__input-icon {
+  &__error {
+    text-align: left;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-top: 10px;
+    color: red;
+  }
+
+  &__input-icon,
+  &__error-icon {
     margin-left: 12px;
+    width: 24px;
+    height: 24px;
   }
 
   &__pull-right {
@@ -48,13 +92,47 @@
   &__checkbox {
     display: flex;
     align-items: center;
-    gap: 7px;
 
     &-label {
+      user-select: none;
+      margin-left: 29px;
+      position: relative;
       font-size: 1.5rem;
       font-weight: 500;
       line-height: 146.667%;
       color: var(--auth-desc-color);
+      &::before,
+      &::after {
+        position: absolute;
+        content: "";
+        display: inline-block;
+        bottom: 0;
+        left: -29px;
+      }
+
+      &::before {
+        width: 19px;
+        height: 19px;
+        border-radius: 5px;
+        border: 2px solid #9e9da8;
+      }
+    }
+  }
+
+  &__checkbox:has(:checked) {
+    .form__checkbox-label::before {
+      border-color: #77dae6;
+      background-color: #77dae6;
+    }
+
+    .form__checkbox-label::after {
+      left: -26px;
+      bottom: 8px;
+      width: 12px;
+      height: 7px;
+      border: 3px solid white;
+      rotate: -45deg;
+      border-color: transparent transparent #fff #fff;
     }
   }
 }

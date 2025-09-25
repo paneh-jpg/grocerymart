@@ -87,13 +87,20 @@
                   placeholder="Email"
                   id=""
                   class="form__input"
+                  required
                 />
                 <img
                   src="./assets/icon/message.svg"
                   alt=""
                   class="form__input-icon"
                 />
+                <img
+                  src="./assets/icon/warning.svg"
+                  alt=""
+                  class="form__error-icon form__pull-right"
+                />
               </div>
+              <p class="form__error">Email chưa đúng định dạng</p>
             </div>
 
             <div class="form__group">
@@ -104,13 +111,21 @@
                   placeholder="Password"
                   id=""
                   class="form__input"
+                  required
+                  minlength="6"
                 />
                 <img
                   src="./assets/icon/password.svg"
                   alt=""
                   class="form__input-icon"
                 />
+                <img
+                  src="./assets/icon/warning.svg"
+                  alt=""
+                  class="form__error-icon form__pull-right"
+                />
               </div>
+              <p class="form__error">Mật khẩu ít nhất 6 kí tự</p>
             </div>
 
             <div class="form__group">
@@ -121,13 +136,21 @@
                   placeholder="Confirm password"
                   id=""
                   class="form__input"
+                  required
+                  minlength="6"
                 />
                 <img
                   src="./assets/icon/password.svg"
                   alt=""
                   class="form__input-icon"
                 />
+                <img
+                  src="./assets/icon/warning.svg"
+                  alt=""
+                  class="form__error-icon form__pull-right"
+                />
               </div>
+              <p class="form__error">Mật khẩu ít nhất 6 kí tự</p>
             </div>
 
             <div class="form__group form__group--inline">
@@ -136,7 +159,7 @@
                   type="checkbox"
                   name=""
                   id=""
-                  class="form__checkbox-input"
+                  class="form__checkbox-input d-none"
                 />
                 <span class="form__checkbox-label">Set as default card</span>
               </label>
@@ -147,10 +170,12 @@
             </div>
 
             <div class="form__group auth__btn-group">
-              <button class="btn btn--primary auth__btn">Sign Up</button>
+              <button class="btn btn--primary auth__btn form__submit-btn">
+                Sign Up
+              </button>
               <button class="btn btn--outline auth__btn btn--no-margin">
                 <img src="./assets/icon/google.svg" alt="" class="btn__icon" />
-                Sign in with Gmail
+                Sign in with Google
               </button>
             </div>
           </form>

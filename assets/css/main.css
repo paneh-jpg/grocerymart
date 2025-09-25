@@ -1308,6 +1308,20 @@ input {
     display: none !important;
   }
 }
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
 .top-act__btn, .top-act__group, .top-act, .navbar__link a, .navbar__list, .top-bar {
   display: flex;
   align-items: center;
@@ -2507,12 +2521,35 @@ input {
   }
 }
 
+.form:has(:invalid) .form__submit-btn {
+  opacity: 0.5;
+  pointer-events: none !important;
+}
 .form__group {
   margin-top: 30px;
 }
 .form__group--inline {
   display: flex;
   align-items: center;
+}
+.form__group:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__text-input {
+  border-color: red;
+  background: rgba(255, 0, 0, 0.1);
+}
+.form__group:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__error-icon {
+  display: inline-flex;
+}
+.form__group:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__error {
+  display: block;
+}
+.form__group:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__input-icon {
+  display: none;
+}
+.form__error-icon, .form__error {
+  display: none;
+}
+.form__error-icon {
+  animation: shake 0.8s;
 }
 .form__text-input {
   height: 50px;
@@ -2536,8 +2573,17 @@ input {
 .form__input::placeholder {
   color: #d2d1d6;
 }
-.form__input-icon {
+.form__error {
+  text-align: left;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 10px;
+  color: red;
+}
+.form__input-icon, .form__error-icon {
   margin-left: 12px;
+  width: 24px;
+  height: 24px;
 }
 .form__pull-right {
   margin-left: auto;
@@ -2545,13 +2591,41 @@ input {
 .form__checkbox {
   display: flex;
   align-items: center;
-  gap: 7px;
 }
 .form__checkbox-label {
+  user-select: none;
+  margin-left: 29px;
+  position: relative;
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 146.667%;
   color: var(--auth-desc-color);
+}
+.form__checkbox-label::before, .form__checkbox-label::after {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  bottom: 0;
+  left: -29px;
+}
+.form__checkbox-label::before {
+  width: 19px;
+  height: 19px;
+  border-radius: 5px;
+  border: 2px solid #9e9da8;
+}
+.form__checkbox:has(:checked) .form__checkbox-label::before {
+  border-color: #77dae6;
+  background-color: #77dae6;
+}
+.form__checkbox:has(:checked) .form__checkbox-label::after {
+  left: -26px;
+  bottom: 8px;
+  width: 12px;
+  height: 7px;
+  border: 3px solid white;
+  rotate: -45deg;
+  border-color: transparent transparent #fff #fff;
 }
 
 html.dark {
@@ -2707,7 +2781,7 @@ html {
   font-weight: 500;
   line-height: 144.444%;
 }
-@media (max-width: 767.98px) {
+@media (max-width: 1199.98px) {
   .auth__intro-text {
     max-width: 100%;
   }
