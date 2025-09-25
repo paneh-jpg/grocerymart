@@ -2636,6 +2636,19 @@ input {
   border-color: transparent transparent #fff #fff;
 }
 
+.message {
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  width: 100%;
+  text-align: left;
+}
+.message--success {
+  background: rgba(19, 222, 96, 0.2);
+  border: 1px solid #46a05c;
+}
+
 html.dark {
   --text-color: #fff;
   --icon-color: brightness(0) saturate(100%) invert(100%) sepia(8%)
@@ -2782,6 +2795,9 @@ html {
     min-height: -webkit-fill-available;
   }
 }
+.auth__message {
+  margin-top: 20px;
+}
 .auth__intro, .auth__content, .auth__content-inner {
   flex: 1;
   display: flex;
@@ -2817,6 +2833,7 @@ html {
   }
 }
 .auth__intro-img {
+  width: var(--width);
   max-width: 100%;
 }
 .auth__intro-logo, .auth__intro-next {
@@ -2935,6 +2952,13 @@ html {
     font-size: 1.6rem;
     margin-top: 46px;
   }
+}
+
+.forgot-auth__form {
+  margin-top: 10px;
+}
+.forgot-auth__form .form__group:first-child {
+  margin-top: 0;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -8,6 +8,10 @@
     min-height: -webkit-fill-available;
   }
 
+  &__message {
+    margin-top: 20px;
+  }
+
   &__intro,
   &__content,
   &__content-inner {
@@ -47,6 +51,7 @@
     }
 
     &-img {
+      width: var(--width);
       max-width: 100%;
     }
 
@@ -174,5 +179,13 @@
       font-size: 1.6rem;
       margin-top: 46px;
     }
+  }
+}
+
+.forgot-auth__form {
+  margin-top: 10px;
+
+  .form__group:first-child {
+    margin-top: 0;
   }
 }
