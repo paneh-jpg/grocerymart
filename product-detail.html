@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grocery Mart</title>
+
+    <!-- Favicon  -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="./assets/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+
+    <!-- Font  -->
+    <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+
+    <!-- Style CSS  -->
+    <link rel="stylesheet" href="./assets/css/main.css" />
+
+    <!-- Java Script  -->
+    <script src="./assets/js/scripts.js"></script>
+  </head>
+  <body>
+    <!-- Header  -->
+    <header class="header" id="header"></header>
+    <script>
+      load("header", "./templates/header-logined.html");
+    </script>
+
+    <!-- MAIN -->
+    <main class="product-page">
+      <div class="container">
+        <div class="product-container">
+          <!-- Breadcrumbs -->
+          <ul class="breadcrumb">
+            <li>
+              <a href="#!" class="breadcrumb__link">
+                Departments
+                <img
+                  src="./assets/icon/arrow-right.svg"
+                  alt=""
+                  class="breadcrumb__icon icon"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#!" class="breadcrumb__link">
+                Coffee
+                <img
+                  src="./assets/icon/arrow-right.svg"
+                  alt=""
+                  class="breadcrumb__icon icon"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#!" class="breadcrumb__link">
+                Coffee Beans
+                <img
+                  src="./assets/icon/arrow-right.svg"
+                  alt=""
+                  class="breadcrumb__icon icon"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#!" class="breadcrumb__link breadcrumb__link--current"
+                >LavAzza
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer  -->
+    <footer id="footer" class="footer"></footer>
+    <script>
+      load("footer", "./templates/footer.html");
+    </script>
+  </body>
+</html>

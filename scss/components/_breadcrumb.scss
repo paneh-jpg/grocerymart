@@ -1,0 +1,46 @@
+@use "../abstracts";
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  min-height: 64px;
+  padding: 16px 20px;
+  border-radius: 10px;
+  background: var(--breadcrumb-bg);
+  box-shadow: 0 20px 60px 10px var(--breadcrumb-shadow);
+
+  @include abstracts.screen(md) {
+    gap: 16px 20px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #9e9da8;
+
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 150%;
+
+    white-space: nowrap;
+
+    @include abstracts.screen(md) {
+      font-size: 1.4rem;
+    }
+
+    &--current {
+      color: inherit;
+    }
+  }
+
+  &__icon {
+    margin-top: 2px;
+    filter: brightness(0) saturate(100%) invert(72%) sepia(10%) saturate(245%)
+      hue-rotate(206deg) brightness(87%) contrast(86%);
+  }
+}

@@ -1355,7 +1355,7 @@ input {
     margin-left: 40px;
   }
   .top-bar__logo-title {
-    font-size: 1.8rem;
+    font-size: 1.8rem !important;
   }
   .top-bar__logo-img {
     width: 24px;
@@ -2546,7 +2546,6 @@ input {
 }
 .form__text-input {
   height: 50px;
-  padding: 0 12px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -2564,6 +2563,7 @@ input {
 .form__input {
   flex: 1;
   height: 100%;
+  padding: 0 12px;
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 144.444%;
@@ -2649,6 +2649,45 @@ input {
   border: 1px solid #46a05c;
 }
 
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  min-height: 64px;
+  padding: 16px 20px;
+  border-radius: 10px;
+  background: var(--breadcrumb-bg);
+  box-shadow: 0 20px 60px 10px var(--breadcrumb-shadow);
+}
+@media (max-width: 767.98px) {
+  .breadcrumb {
+    gap: 16px 20px;
+  }
+}
+.breadcrumb__link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #9e9da8;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 150%;
+  white-space: nowrap;
+}
+@media (max-width: 767.98px) {
+  .breadcrumb__link {
+    font-size: 1.4rem;
+  }
+}
+.breadcrumb__link--current {
+  color: inherit;
+}
+.breadcrumb__icon {
+  margin-top: 2px;
+  filter: brightness(0) saturate(100%) invert(72%) sepia(10%) saturate(245%) hue-rotate(206deg) brightness(87%) contrast(86%);
+}
+
 html.dark {
   --text-color: #fff;
   --icon-color: brightness(0) saturate(100%) invert(100%) sepia(8%)
@@ -2690,6 +2729,9 @@ html.dark {
   --auth-intro-text-color: #b9babe;
   --text-input-border-color: #b9babe;
   --form-placeholder-color: #b9babe;
+  --product-detail-bg: #292e39;
+  --breadcrumb-bg: #171c28;
+  --breadcrumb-shadow: rgba(23, 28, 40, 0.2);
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -2737,6 +2779,9 @@ html {
   --auth-intro-text-color: #1a162e;
   --text-input-border-color: #d2d1d6;
   --form-placeholder-color: #d2d1d6;
+  --product-detail-bg: #fff;
+  --breadcrumb-bg: #f6f6f6;
+  --breadcrumb-shadow: rgba(237, 237, 246, 0.2);
 }
 @media (max-width: 991.98px) {
   html {
@@ -2959,6 +3004,22 @@ html {
 }
 .forgot-auth__form .form__group:first-child {
   margin-top: 0;
+}
+
+.product-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 80vh;
+  background-color: var(--product-detail-bg);
+}
+
+.product-container {
+  margin-top: 40px;
+}
+@media (max-width: 767.98px) {
+  .product-container {
+    margin-top: 30px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

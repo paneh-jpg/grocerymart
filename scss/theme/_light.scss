@@ -58,6 +58,13 @@ html {
   --text-input-border-color: #d2d1d6;
   --form-placeholder-color: #d2d1d6;
 
+  // Product Detail
+  --product-detail-bg: #fff;
+
+  //Breadcrumb
+  --breadcrumb-bg: #f6f6f6;
+  --breadcrumb-shadow: rgba(237, 237, 246, 0.2);
+
   @include abstracts.screen(lg) {
     --header-bg-color: #fff;
     --header-shadow-color: rgba(237, 237, 246, 0.2);
