@@ -17,8 +17,8 @@
 
   &__group:has(:invalid):has(&__input:not(:placeholder-shown)) {
     .form__text-input {
-      border-color: red;
-      background: rgba($color: red, $alpha: 0.1);
+      border-color: #ed4337;
+      background: rgba($color: #ed4337, $alpha: 0.1);
     }
 
     .form__error-icon {
@@ -40,7 +40,7 @@
   }
 
   &__error-icon {
-    animation: shake 0.8s;
+    animation: shake 0.4s;
   }
 
   &__text-input {
@@ -55,6 +55,10 @@
     &:focus-within {
       border-color: #77dae6;
     }
+
+    @include abstracts.screen(md) {
+      height: 48px;
+    }
   }
 
   &__input {
@@ -68,6 +72,10 @@
     &::placeholder {
       color: #d2d1d6;
     }
+
+    @include abstracts.screen(md) {
+      font-size: 1.6rem;
+    }
   }
 
   &__error {
@@ -75,7 +83,7 @@
     font-size: 1.4rem;
     font-weight: 600;
     margin-top: 10px;
-    color: red;
+    color: #ed4337;
   }
 
   &__input-icon,
@@ -116,6 +124,10 @@
         border-radius: 5px;
         border: 2px solid #9e9da8;
       }
+
+      @include abstracts.screen(md) {
+        font-size: 1.4rem;
+      }
     }
   }
 
@@ -130,7 +142,7 @@
       bottom: 8px;
       width: 12px;
       height: 7px;
-      border: 3px solid white;
+      border: 2px solid white;
       rotate: -45deg;
       border-color: transparent transparent #fff #fff;
     }

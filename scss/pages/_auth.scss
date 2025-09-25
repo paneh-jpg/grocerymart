@@ -3,6 +3,10 @@
 .auth {
   min-height: 100vh;
   display: flex;
+  min-height: 100vh;
+  @supports (-webkit-touch-callout: none) {
+    min-height: -webkit-fill-available;
+  }
 
   &__intro,
   &__content,
@@ -33,6 +37,10 @@
 
       @include abstracts.screen(xl) {
         max-width: 100%;
+      }
+
+      @include abstracts.screen(sm) {
+        font-size: 1.5rem;
       }
     }
 
@@ -65,6 +73,9 @@
 
       .logo {
         margin-left: 0;
+        @include abstracts.screen(md) {
+          margin-top: 30px;
+        }
       }
     }
 
@@ -87,22 +98,34 @@
     font-size: 3rem;
     font-weight: 500;
     line-height: 146.667%;
+
+    @include abstracts.screen(xl) {
+      margin-top: 50px;
+    }
   }
 
   &__desc {
     text-align: center;
     margin-top: 10px;
-    font-size: 15px;
+    font-size: 1.5rem;
     font-style: normal;
     font-weight: 500;
     line-height: 22px;
     padding: 0 20px;
     color: #9e9da8;
+
+    @include abstracts.screen(md) {
+      font-size: 1.4rem;
+    }
   }
 
   &__form {
     width: 100%;
     margin-top: 30px;
+
+    @include abstracts.screen(xl) {
+      margin-top: 9px;
+    }
   }
 
   &__link {
@@ -110,6 +133,10 @@
     font-size: 1.5rem;
     font-weight: 500;
     line-height: 146.667%;
+
+    @include abstracts.screen(md) {
+      font-size: 1.4rem;
+    }
   }
 
   &__btn-group {
@@ -135,5 +162,10 @@
     font-size: 1.8rem;
     font-weight: 400;
     line-height: 144.444%;
+
+    @include abstracts.screen(md) {
+      font-size: 1.6rem;
+      margin-top: 56px;
+    }
   }
 }
