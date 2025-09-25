@@ -84,8 +84,11 @@
   gap: 16px;
   margin-top: 30px;
 
-  &__icon {
+  &__icon-col-2 {
     align-self: flex-start;
+  }
+
+  &__icon-col-2 {
     margin-top: 5px;
   }
 
@@ -101,4 +104,16 @@
     font-weight: 400;
     line-height: 142.857%;
   }
+
+  &-filter__col {
+    margin-top: 30px;
+  }
+
+  &-form__tag {
+    background-color: var(--prod-prop-form__tag-bg);
+  }
+}
+
+.prod-props {
+  margin-left: 30px;
 }

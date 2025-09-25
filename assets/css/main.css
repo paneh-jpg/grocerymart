@@ -2286,15 +2286,6 @@ input {
 .filter__form {
   margin-top: 30px;
 }
-.filter__form-label {
-  font-size: 2.2rem;
-  font-weight: 500;
-  line-height: 145.455%;
-}
-.filter__form-label--small {
-  font-size: 1.4rem;
-  line-height: 142.857%;
-}
 .filter__form-group {
   margin-top: 20px;
 }
@@ -2333,7 +2324,7 @@ input {
 .filter__form-slider::after {
   left: var(--max-value);
 }
-.filter__form-select-wrap, .filter__form-text-input {
+.filter__form-text-input {
   border-radius: 6px;
   border: 1px solid #d2d1d6;
 }
@@ -2377,68 +2368,6 @@ input {
   .filter__form-input {
     font-size: 1.6rem;
   }
-}
-.filter__form-select-wrap {
-  display: flex;
-  align-items: center;
-  height: 45px;
-}
-.filter__form-select {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 14px;
-  min-width: var(--width, 108px);
-  height: calc(100% - 10px);
-  font-size: 1.4rem;
-  font-weight: 500;
-  line-height: 142.857%;
-}
-.filter__form-select-01 {
-  width: 158px;
-}
-@media (max-width: 575.98px) {
-  .filter__form-select-01 {
-    width: 108px;
-  }
-}
-@media (max-width: 1199.98px) {
-  .filter__form-select {
-    flex: 1;
-  }
-}
-.filter__form-select + .filter__form-select {
-  border-left: 1px solid #d2d1d6;
-}
-.filter__form-tags {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px 20px;
-}
-@media (max-width: 1199.98px) {
-  .filter__form-tags {
-    gap: 9px;
-  }
-}
-.filter__form-tag {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  padding: 6px 12px;
-  height: 32px;
-  border-radius: 6px;
-  background: var(--filter-form-tag-bg);
-  color: var(--filter-form-tag-text-color);
-  font-size: 1.4rem;
-  font-weight: 500;
-  line-height: 142.857%;
-}
-.filter__form-tag:hover {
-  color: var(--text-color);
 }
 .filter__row {
   display: flex;
@@ -2635,6 +2564,79 @@ input {
   rotate: -45deg;
   border-color: transparent transparent #fff #fff;
 }
+.form__label {
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 145.455%;
+}
+.form__label--small {
+  font-size: 1.4rem;
+  line-height: 142.857%;
+}
+.form__select-wrap {
+  border-radius: 6px;
+  border: 1px solid #d2d1d6;
+  display: flex;
+  align-items: center;
+  height: 45px;
+}
+.form__select {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 14px;
+  min-width: var(--width, 108px);
+  height: calc(100% - 10px);
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 142.857%;
+}
+.form__select-01 {
+  width: 158px;
+}
+@media (max-width: 575.98px) {
+  .form__select-01 {
+    width: 108px;
+  }
+}
+@media (max-width: 1199.98px) {
+  .form__select {
+    flex: 1;
+  }
+}
+.form__select + .form__select {
+  border-left: 1px solid #d2d1d6;
+}
+.form__tags {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+}
+@media (max-width: 1199.98px) {
+  .form__tags {
+    gap: 9px;
+  }
+}
+.form__tag {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding: 6px 12px;
+  height: 32px;
+  border-radius: 6px;
+  background: var(--filter-form-tag-bg);
+  color: var(--filter-form-tag-text-color);
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 142.857%;
+}
+.form__tag:hover {
+  color: var(--text-color);
+}
 
 .message {
   padding: 14px;
@@ -2730,6 +2732,7 @@ html.dark {
   --text-input-border-color: #b9babe;
   --form-placeholder-color: #b9babe;
   --product-detail-bg: #292e39;
+  --prod-prop-form__tag-bg: #292e39;
   --breadcrumb-bg: #171c28;
   --breadcrumb-shadow: rgba(23, 28, 40, 0.2);
 }
@@ -2780,6 +2783,7 @@ html {
   --text-input-border-color: #d2d1d6;
   --form-placeholder-color: #d2d1d6;
   --product-detail-bg: #fff;
+  --prod-prop-form__tag-bg: #ededf6;
   --breadcrumb-bg: #f6f6f6;
   --breadcrumb-shadow: rgba(237, 237, 246, 0.2);
 }
@@ -3084,8 +3088,10 @@ html {
   gap: 16px;
   margin-top: 30px;
 }
-.prod-prop__icon {
+.prod-prop__icon-col-2 {
   align-self: flex-start;
+}
+.prod-prop__icon-col-2 {
   margin-top: 5px;
 }
 .prod-prop__title {
@@ -3098,6 +3104,16 @@ html {
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 142.857%;
+}
+.prod-prop-filter__col {
+  margin-top: 30px;
+}
+.prod-prop-form__tag {
+  background-color: var(--prod-prop-form__tag-bg);
+}
+
+.prod-props {
+  margin-left: 30px;
 }
 
 /*# sourceMappingURL=main.css.map */
