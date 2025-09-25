@@ -77,6 +77,67 @@
     font-weight: 500;
     line-height: 138.462%;
   }
+
+  &__card {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #b9babe;
+
+    .row {
+      display: flex;
+      align-items: center;
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__price {
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 150%;
+  }
+
+  &__tax {
+    color: #67b044;
+    background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.8) 0%,
+        rgba(255, 255, 255, 0.8) 100%
+      ),
+      #67b044;
+
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 142.857%;
+
+    padding: 2px 8px;
+  }
+
+  &__total-price {
+    margin-top: 20px;
+    color: #000;
+
+    font-size: 2.6rem;
+    font-weight: 500;
+    line-height: 138.462%;
+  }
+
+  &__add-btn {
+    margin-top: 20px;
+    width: 100%;
+    margin-left: 10px;
+  }
+
+  &__like-btn {
+    margin-top: 20px;
+    margin-right: 10px;
+    width: 46px;
+    height: 46px;
+    margin-left: 20px;
+    border-radius: 6px;
+    border: 1px solid #d2d1d6;
+    background: transparent;
+  }
 }
 
 .prod-prop {
