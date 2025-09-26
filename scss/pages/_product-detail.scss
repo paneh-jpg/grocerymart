@@ -17,9 +17,18 @@
 
 .prod-preview {
   padding: 0 30px;
+
+  @include abstracts.screen(lg) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
   &__list {
     display: flex;
     overflow: hidden;
+
+    @include abstracts.screen(lg) {
+      flex: 1;
+    }
   }
 
   &__item {
@@ -44,6 +53,15 @@
     justify-content: center;
     gap: 15px;
     padding: 30px;
+
+    @include abstracts.screen(lg) {
+      flex-direction: column;
+      padding-left: 0;
+    }
+
+    @include abstracts.screen(md) {
+      display: none;
+    }
   }
 
   &__thumb-img {
@@ -59,6 +77,10 @@
       opacity: 1;
       border-color: rgba(158, 157, 168, 1);
       transform: translateY(-5px);
+
+      @include abstracts.screen(lg) {
+        transform: translateX(5px);
+      }
     }
 
     &--current {
@@ -71,6 +93,14 @@
 .prod-info {
   padding: 60px;
   background-color: var(--breadcrumb-bg);
+
+  @include abstracts.screen(xxl) {
+    padding: 30px;
+  }
+
+  @include abstracts.screen(lg) {
+    margin-top: 30px;
+  }
 
   &__heading {
     font-size: 2.6rem;
@@ -177,4 +207,8 @@
 
 .prod-props {
   margin-left: 30px;
+
+  @include abstracts.screen(xxl) {
+    margin-left: 20px;
+  }
 }
