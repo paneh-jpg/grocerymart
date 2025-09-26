@@ -72,6 +72,9 @@ html {
   --breadcrumb-bg: #f6f6f6;
   --breadcrumb-shadow: rgba(237, 237, 246, 0.2);
 
+  // Text Content
+  --text-content-hr-bg: #ebebeb;
+
   @include abstracts.screen(lg) {
     --header-bg-color: #fff;
     --header-shadow-color: rgba(237, 237, 246, 0.2);

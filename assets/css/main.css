@@ -2768,13 +2768,13 @@ input {
   text-align: center;
 }
 .text-content a {
-  color: #ffb700;
+  color: #77dae6;
   text-decoration: underline;
 }
 .text-content blockquote {
-  background: rgba(255, 183, 0, 0.1);
+  background: rgba(119, 218, 230, 0.1);
   padding: 20px;
-  border-left: 3px solid #ffb700;
+  border-left: 3px solid #77dae6;
 }
 .text-content blockquote p {
   margin: 0;
@@ -2782,7 +2782,7 @@ input {
 .text-content hr {
   border: none;
   height: 1.5px;
-  background: #ebebeb;
+  background: var(--text-content-hr-bg);
 }
 
 html.dark {
@@ -2834,6 +2834,7 @@ html.dark {
   --review-card-bg: #171c28;
   --breadcrumb-bg: #171c28;
   --breadcrumb-shadow: rgba(23, 28, 40, 0.2);
+  --text-content-hr-bg: #414349;
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -2892,6 +2893,7 @@ html {
   --review-card-bg: #fafafd;
   --breadcrumb-bg: #f6f6f6;
   --breadcrumb-shadow: rgba(237, 237, 246, 0.2);
+  --text-content-hr-bg: #ebebeb;
 }
 @media (max-width: 991.98px) {
   html {

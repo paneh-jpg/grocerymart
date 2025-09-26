@@ -77,6 +77,9 @@ html.dark {
   --breadcrumb-bg: #171c28;
   --breadcrumb-shadow: rgba(23, 28, 40, 0.2);
 
+  // Text Content
+  --text-content-hr-bg: #414349;
+
   @include abstracts.screen(lg) {
     --header-shadow-color: rgba(0, 0, 0, 0.2);
   }
