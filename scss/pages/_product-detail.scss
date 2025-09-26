@@ -287,6 +287,7 @@
     @include abstracts.screen(md) {
       margin-top: 20px;
       margin-left: -10px;
+      flex-wrap: wrap;
     }
   }
 
@@ -299,6 +300,7 @@
     line-height: 145.455%;
 
     cursor: pointer;
+    white-space: nowrap;
 
     &--current {
       color: var(--text-color);
@@ -405,8 +407,16 @@
     align-items: center;
     gap: 8px;
 
-    @include abstracts.screen(md) {
+    @include abstracts.screen(xl) {
+      gap: 2px;
+    }
+
+    @include abstracts.screen(lg) {
       gap: 6px;
+    }
+
+    @include abstracts.screen(sm) {
+      gap: 2px;
     }
 
     &-title {

@@ -3391,6 +3391,7 @@ html {
   .prod-tab__list {
     margin-top: 20px;
     margin-left: -10px;
+    flex-wrap: wrap;
   }
 }
 .prod-tab__item {
@@ -3400,6 +3401,7 @@ html {
   font-weight: 500;
   line-height: 145.455%;
   cursor: pointer;
+  white-space: nowrap;
 }
 .prod-tab__item--current {
   color: var(--text-color);
@@ -3499,9 +3501,19 @@ html {
   align-items: center;
   gap: 8px;
 }
-@media (max-width: 767.98px) {
+@media (max-width: 1199.98px) {
+  .review-card__rating {
+    gap: 2px;
+  }
+}
+@media (max-width: 991.98px) {
   .review-card__rating {
     gap: 6px;
+  }
+}
+@media (max-width: 575.98px) {
+  .review-card__rating {
+    gap: 2px;
   }
 }
 .review-card__rating-title {
