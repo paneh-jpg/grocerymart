@@ -61,6 +61,8 @@ html {
   // Product Detail
   --product-detail-bg: #fff;
   --prod-prop-form__tag-bg: #ededf6;
+  --product-container-bg: #fff;
+  --prod-prop-heading-color: #1a162e;
 
   //Breadcrumb
   --breadcrumb-bg: #f6f6f6;
@@ -74,5 +76,8 @@ html {
   @include abstracts.screen(md) {
     --cate-item-bg: #fff;
     --auth-intro-bg: #fff;
+
+    --product-detail-bg: #fafafd;
+    --breadcrumb-bg: #fff;
   }
 }

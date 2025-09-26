@@ -66,6 +66,8 @@ html.dark {
   // Product Detail
   --product-detail-bg: #292e39;
   --prod-prop-form__tag-bg: #292e39;
+  --product-container-bg: #171c28;
+  --prod-prop-heading-color: #eee;
 
   //Breadcrumb
   --breadcrumb-bg: #171c28;
@@ -77,5 +79,7 @@ html.dark {
 
   @include abstracts.screen(md) {
     --auth-intro-bg: #292e39;
+    --product-detail-bg: #282d38;
+    --prod-prop-heading-color: #b9babe;
   }
 }

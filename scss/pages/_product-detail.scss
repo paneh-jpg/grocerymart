@@ -3,6 +3,7 @@
 .product-page {
   display: flex;
   flex-direction: column;
+  padding-bottom: 50px;
   min-height: 80vh;
   background-color: var(--product-detail-bg);
 }
@@ -10,8 +11,12 @@
 .product-container {
   margin-top: 40px;
 
-  @include abstracts.screen(md) {
-    margin-top: 30px;
+  &--content {
+    @include abstracts.screen(md) {
+      margin-top: 30px;
+      border-radius: 20px;
+      background: var(--product-container-bg);
+    }
   }
 }
 
@@ -22,6 +27,7 @@
     display: flex;
     flex-direction: row-reverse;
   }
+
   &__list {
     display: flex;
     overflow: hidden;
@@ -100,12 +106,25 @@
 
   @include abstracts.screen(lg) {
     margin-top: 30px;
+    border-radius: 20px;
+  }
+
+  @include abstracts.screen(md) {
+    margin-top: 0;
+    padding: 0 16px;
   }
 
   &__heading {
     font-size: 2.6rem;
     font-weight: 500;
     line-height: 138.462%;
+    color: var(--prod-prop-heading-color);
+
+    @include abstracts.screen(md) {
+      font-size: 1.8rem;
+      font-weight: 700;
+      line-height: 26px;
+    }
   }
 
   &__card {
@@ -113,6 +132,10 @@
     padding: 20px;
     border-radius: 6px;
     border: 1px solid #b9babe;
+
+    @include abstracts.screen(md) {
+      margin: 16px 0;
+    }
 
     .row {
       display: flex;
@@ -145,7 +168,6 @@
 
   &__total-price {
     margin-top: 20px;
-    color: #000;
 
     font-size: 2.6rem;
     font-weight: 500;
@@ -156,6 +178,10 @@
     margin-top: 20px;
     width: 100%;
     margin-left: 10px;
+
+    @include abstracts.screen(lg) {
+      margin-left: 20px;
+    }
   }
 
   &__like-btn {
@@ -174,6 +200,10 @@
   display: flex;
   gap: 16px;
   margin-top: 30px;
+
+  @include abstracts.screen(md) {
+    margin-top: 16px;
+  }
 
   &__icon-col-2 {
     align-self: flex-start;
@@ -203,6 +233,10 @@
   &-form__tag {
     background-color: var(--prod-prop-form__tag-bg);
   }
+
+  &__sub {
+    margin-left: 4px;
+  }
 }
 
 .prod-props {
@@ -210,5 +244,13 @@
 
   @include abstracts.screen(xxl) {
     margin-left: 20px;
+  }
+
+  @include abstracts.screen(md) {
+    margin-left: 0;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
   }
 }
