@@ -38,8 +38,29 @@
     </script>
 
     <!-- MAIN -->
-    <main class="product-page home">
+    <main class="product-page">
       <div class="container">
+        <!-- Search Bar  -->
+        <div class="product-container">
+          <div class="search-bar d-none d-md-flex">
+            <input
+              type="text"
+              name=""
+              placeholder="Search for item"
+              id=""
+              class="search-bar__input"
+            />
+            <button class="search-bar__submit form__pull-right">
+              <img
+                src="./assets/icon/search.svg"
+                alt=""
+                class="search-bar__submit-icon icon"
+              />
+            </button>
+          </div>
+        </div>
+
+        <!-- Breadcrumbs -->
         <div class="product-container">
           <!-- Breadcrumbs -->
           <ul class="breadcrumb">
@@ -81,6 +102,7 @@
           </ul>
         </div>
 
+        <!-- Product Info -->
         <div class="product-container product-container--content">
           <div class="row">
             <div class="col-5 col-xl-6 col-lg-12">
@@ -172,7 +194,7 @@
                               />
                             </div>
 
-                            <div class="form__select">
+                            <div class="form__select form__select-02">
                               <span>Gram</span>
                               <img
                                 src="./assets/icon/filter-narrow.svg"

@@ -11,6 +11,10 @@
 .product-container {
   margin-top: 40px;
 
+  @include abstracts.screen(md) {
+    margin-top: 20px;
+  }
+
   &--content {
     @include abstracts.screen(md) {
       margin-top: 30px;
@@ -75,14 +79,14 @@
     object-fit: contain;
     border: 1.5px solid rgba(158, 157, 168, 0.4);
     border-radius: 8px;
-    cursor: pointer;
     opacity: 0.9;
     transition: all 0.5s ease;
 
-    &:hover {
+    &:not(&--current):hover {
       opacity: 1;
       border-color: rgba(158, 157, 168, 1);
       transform: translateY(-5px);
+      cursor: pointer;
 
       @include abstracts.screen(lg) {
         transform: translateX(5px);
@@ -97,6 +101,7 @@
 }
 
 .prod-info {
+  border-radius: 10px;
   padding: 60px;
   background-color: var(--breadcrumb-bg);
 
@@ -111,6 +116,10 @@
 
   @include abstracts.screen(md) {
     margin-top: 0;
+    padding: 0 20px;
+  }
+
+  @include abstracts.screen(sm) {
     padding: 0 16px;
   }
 
@@ -159,6 +168,8 @@
       ),
       #67b044;
 
+    border-radius: 4px;
+
     font-size: 1.4rem;
     font-weight: 500;
     line-height: 142.857%;
@@ -193,6 +204,19 @@
     border-radius: 6px;
     border: 1px solid #d2d1d6;
     background: transparent;
+  }
+  @include abstracts.screen(xl) {
+    .form__select-01 {
+      width: 61%;
+    }
+
+    .form__select-02 {
+      width: 39%;
+    }
+
+    .form__select {
+      flex: initial;
+    }
   }
 }
 
