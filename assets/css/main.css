@@ -2771,6 +2771,7 @@ html.dark {
     --auth-intro-bg: #292e39;
     --product-detail-bg: #282d38;
     --prod-prop-heading-color: #b9babe;
+    --review-card-bg: #171c28;
   }
 }
 
@@ -2830,6 +2831,7 @@ html {
     --auth-intro-bg: #fff;
     --product-detail-bg: #fafafd;
     --breadcrumb-bg: #fff;
+    --review-card-bg: #fff;
   }
 }
 
@@ -3311,6 +3313,12 @@ html {
   display: flex;
   margin-left: -30px;
 }
+@media (max-width: 767.98px) {
+  .prod-tab__list {
+    margin-top: 20px;
+    margin-left: -10px;
+  }
+}
 .prod-tab__item {
   padding: 0 30px;
   color: #9e9da8;
@@ -3321,6 +3329,12 @@ html {
 .prod-tab__item--current {
   color: var(--text-color);
 }
+@media (max-width: 767.98px) {
+  .prod-tab__item {
+    padding: 0 10px;
+    font-size: 1.4rem;
+  }
+}
 .prod-tab__contents {
   padding-top: 30px;
 }
@@ -3330,11 +3344,22 @@ html {
 .prod-tab__content--current {
   display: block;
 }
+.prod-tab__similar {
+  color: var(--Secondary-Color-Secondary-1, #1a162e);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 146.667%;
+}
 
 .prod-content__heading {
   font-size: 2.4rem;
   font-weight: 700;
   line-height: 141.667%;
+}
+@media (max-width: 767.98px) {
+  .prod-content__heading {
+    font-size: 1.8rem;
+  }
 }
 
 .review-card {
@@ -3342,6 +3367,11 @@ html {
   padding: 30px;
   border-radius: 16px;
   background: var(--review-card-bg);
+}
+@media (max-width: 1199.98px) {
+  .review-card {
+    padding: 20px;
+  }
 }
 .review-card__content {
   display: flex;
@@ -3352,10 +3382,32 @@ html {
   height: 80px;
   border-radius: 50%;
 }
+@media (max-width: 1199.98px) {
+  .review-card__avatar {
+    width: 65px;
+    height: 65px;
+  }
+}
+@media (max-width: 991.98px) {
+  .review-card__avatar {
+    width: 60px;
+    height: 60px;
+  }
+}
 .review-card__title {
   font-size: 2.2rem;
   font-weight: 500;
   line-height: 145.455%;
+}
+@media (max-width: 1199.98px) {
+  .review-card__title {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 991.98px) {
+  .review-card__title {
+    font-size: 1.8;
+  }
 }
 .review-card__desc {
   margin-top: 10px;
@@ -3369,11 +3421,21 @@ html {
   align-items: center;
   gap: 8px;
 }
+@media (max-width: 767.98px) {
+  .review-card__rating {
+    gap: 6px;
+  }
+}
 .review-card__rating-title {
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 144.444%;
   margin-left: 12px;
+}
+@media (max-width: 767.98px) {
+  .review-card__rating-title {
+    font-size: 1.6rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
