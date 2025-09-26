@@ -298,6 +298,8 @@
     font-weight: 500;
     line-height: 145.455%;
 
+    cursor: pointer;
+
     &--current {
       color: var(--text-color);
     }
@@ -337,6 +339,10 @@
     @include abstracts.screen(md) {
       font-size: 1.8rem;
     }
+  }
+
+  &__similar {
+    margin-top: 30px;
   }
 }
 

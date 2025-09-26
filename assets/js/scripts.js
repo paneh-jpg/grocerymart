@@ -189,3 +189,24 @@ window.addEventListener("template-loaded", () => {
     };
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const tabItems = document.querySelectorAll(".prod-tab__item");
+  const tabContents = document.querySelectorAll(".prod-tab__content");
+
+  tabItems.forEach((item, index) => {
+    item.addEventListener("click", () => {
+      // Xóa class current cũ
+      tabItems.forEach((i) => i.classList.remove("prod-tab__item--current"));
+      tabContents.forEach((c) =>
+        c.classList.remove("prod-tab__content--current")
+      );
+
+      // Thêm class current mới
+      item.classList.add("prod-tab__item--current");
+      if (tabContents[index]) {
+        tabContents[index].classList.add("prod-tab__content--current");
+      }
+    });
+  });
+});
