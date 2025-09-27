@@ -321,6 +321,13 @@
     line-height: 145.455%;
   }
 
+  &__separate {
+    height: 1px;
+    width: 100%;
+    margin: 20px 0;
+    background: var(--top-menu-border-color);
+  }
+
   &__bottom {
     margin: 20px 0;
     padding: 20px 0;
@@ -383,7 +390,7 @@
     position: relative;
     padding-top: 100%;
 
-    border: 1.5px solid #ebebeb;
+    border: 1.5px solid var(--top-menu-border-color);
     border-radius: 10px;
   }
 

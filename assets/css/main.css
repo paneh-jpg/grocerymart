@@ -1612,6 +1612,12 @@ input {
   font-weight: 400;
   line-height: 145.455%;
 }
+.act-dropdown__separate {
+  height: 1px;
+  width: 100%;
+  margin: 20px 0;
+  background: var(--top-menu-border-color);
+}
 .act-dropdown__bottom {
   margin: 20px 0;
   padding: 20px 0;
@@ -1660,7 +1666,7 @@ input {
 .cart-preview-item__img-wrap {
   position: relative;
   padding-top: 100%;
-  border: 1.5px solid #ebebeb;
+  border: 1.5px solid var(--top-menu-border-color);
   border-radius: 10px;
 }
 .cart-preview-item__thumb {
