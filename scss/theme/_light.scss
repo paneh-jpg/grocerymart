@@ -81,6 +81,15 @@ html {
   --arrow-up: brightness(0) saturate(100%) invert(100%) sepia(91%) saturate(38%)
     hue-rotate(254deg) brightness(110%) contrast(110%);
 
+  //Checkout Page
+  --checkout-bg-color: #fff;
+  --checkout-shadow: rgba(237, 237, 246, 0.2);
+  --cart-item-input-text-color: #1a162e;
+  --cart-item-input-border-color: #d2d1d6;
+  --cart-item-input-icon-color: brightness(0) saturate(100%) invert(7%)
+    sepia(67%) saturate(713%) hue-rotate(213deg) brightness(97%) contrast(95%);
+  --cart-item-input-title-color: #1a162e;
+
   @include abstracts.screen(lg) {
     --header-bg-color: #fff;
     --header-shadow-color: rgba(237, 237, 246, 0.2);

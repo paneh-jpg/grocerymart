@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout | Grocery Mart</title>
+
+    <!-- Favicon  -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="./assets/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+
+    <!-- Font  -->
+    <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+
+    <!-- Style CSS  -->
+    <link rel="stylesheet" href="./assets/css/main.css" />
+
+    <!-- Java Script  -->
+    <script src="./assets/js/scripts.js"></script>
+  </head>
+  <body>
+    <!-- Header  -->
+    <header class="header" id="header"></header>
+    <script>
+      load("header", "./templates/header-logined.html");
+    </script>
+
+    <!-- MAIN -->
+    <main class="checkout-page">
+      <div class="container">
+        <!-- Search Bar  -->
+        <div class="checkout-container">
+          <div class="search-bar d-none d-md-flex">
+            <input
+              type="text"
+              name=""
+              placeholder="Search for item"
+              id=""
+              class="search-bar__input"
+            />
+            <button class="search-bar__submit form__pull-right">
+              <img
+                src="./assets/icon/search.svg"
+                alt=""
+                class="search-bar__submit-icon icon"
+              />
+            </button>
+          </div>
+        </div>
+
+        <!-- Breadcrumbs -->
+        <div class="checkout-container">
+          <!-- Breadcrumbs -->
+          <ul class="breadcrumb checkout-page__breadcrumb">
+            <li>
+              <a href="./" class="breadcrumb__link">
+                Home
+                <img
+                  src="./assets/icon/arrow-right.svg"
+                  alt=""
+                  class="breadcrumb__icon icon"
+                />
+              </a>
+            </li>
+
+            <li>
+              <a href="#!" class="breadcrumb__link breadcrumb__link--current">
+                Checkout
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Checkout Content  -->
+        <div class="checkout-container">
+          <div class="row">
+            <div class="col-8">
+              <div class="cart-info">
+                <div class="cart-info__list">
+                  <!-- Cart Item 1 -->
+                  <article class="cart-item">
+                    <a href="./product-detail.html">
+                      <img
+                        src="./assets/img/product/item-1.png"
+                        alt=""
+                        class="cart-item__thumb"
+                      />
+                    </a>
+                    <div class="cart-item__content">
+                      <div class="cart-item__content-left">
+                        <h3 class="cart-item__title">
+                          <a href="./product-detail.html">
+                            Coffee Beans - Espresso Arabica and Robusta Beans
+                          </a>
+                          <p class="cart-item__price-wrap">
+                            $47.00 |
+                            <span class="cart-item__status">In Stock</span>
+                          </p>
+                          <div class="cart-item__ctrl">
+                            <div class="cart-item__input">
+                              <span> LavAzza</span>
+                              <img
+                                src="./assets/icon/arrow-down.svg"
+                                alt=""
+                                class="cart-item__icon"
+                              />
+                            </div>
+
+                            <div class="cart-item__input">
+                              <button class="cart-item__input-btn">
+                                <img
+                                  src="./assets/icon/minus.svg"
+                                  alt=""
+                                  class="cart-item__icon"
+                                />
+                              </button>
+                              <span>1</span>
+                              <button class="cart-item__input-btn">
+                                <img
+                                  src="./assets/icon/plus.svg "
+                                  alt=""
+                                  class="cart-item__icon"
+                                />
+                              </button>
+                            </div>
+                          </div>
+                        </h3>
+                      </div>
+                      <div class="cart-item__content-right">
+                        <p class="cart-item__total-price">$47.00</p>
+                        <div class="cart-item__ctrl">
+                          <button class="cart-item__ctrl-btn">
+                            <img
+                              src="./assets/icon/heart-gray.svg"
+                              alt=""
+                              class="cart-item__ctrl-btn-icon"
+                            />
+                            Save
+                          </button>
+                          <button class="cart-item__ctrl-btn">
+                            <img
+                              src="./assets/icon/delete-gray.svg"
+                              alt=""
+                              class="cart-item__ctrl-btn-icon"
+                            />
+                            Delete
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                  <!-- Cart Item 2 -->
+                  <article class="cart-item">
+                    <a href="./product-detail.html">
+                      <img
+                        src="./assets/img/product/item-2.png"
+                        alt=""
+                        class="cart-item__thumb"
+                      />
+                    </a>
+                    <div class="cart-item__content">
+                      <div class="cart-item__content-left">
+                        <h3 class="cart-item__title">
+                          <a href="./product-detail.html">
+                            Lavazza Coffee Blends - Try the Italian Espresso
+                          </a>
+                          <p class="cart-item__price-wrap">
+                            $53.00 |
+                            <span class="cart-item__status">In Stock</span>
+                          </p>
+                          <div class="cart-item__ctrl">
+                            <div class="cart-item__input">
+                              <span> LavAzza</span>
+                              <img
+                                src="./assets/icon/arrow-down.svg"
+                                alt=""
+                                class="cart-item__icon"
+                              />
+                            </div>
+
+                            <div class="cart-item__input">
+                              <button class="cart-item__input-btn">
+                                <img
+                                  src="./assets/icon/minus.svg"
+                                  alt=""
+                                  class="cart-item__icon"
+                                />
+                              </button>
+                              <span>2</span>
+                              <button class="cart-item__input-btn">
+                                <img
+                                  src="./assets/icon/plus.svg "
+                                  alt=""
+                                  class="cart-item__icon"
+                                />
+                              </button>
+                            </div>
+                          </div>
+                        </h3>
+                      </div>
+                      <div class="cart-item__content-right">
+                        <p class="cart-item__total-price">$106.00</p>
+                        <div class="cart-item__ctrl">
+                          <button class="cart-item__ctrl-btn">
+                            <img
+                              src="./assets/icon/heart-gray.svg"
+                              alt=""
+                              class="cart-item__ctrl-btn-icon"
+                            />
+                            Save
+                          </button>
+                          <button class="cart-item__ctrl-btn">
+                            <img
+                              src="./assets/icon/delete-gray.svg"
+                              alt=""
+                              class="cart-item__ctrl-btn-icon"
+                            />
+                            Delete
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                  <!-- Cart Item 3 -->
+                  <article class="cart-item">
+                    <a href="./product-detail.html">
+                      <img
+                        src="./assets/img/product/item-3.png"
+                        alt=""
+                        class="cart-item__thumb"
+                      />
+                    </a>
+                    <div class="cart-item__content">
+                      <div class="cart-item__content-left">
+                        <h3 class="cart-item__title">
+                          <a href="./product-detail.html">
+                            Qualità Oro Mountain Grown - Espresso Coffee Beans
+                          </a>
+                          <p class="cart-item__price-wrap">
+                            $38.65 |
+                            <span class="cart-item__status">In Stock</span>
+                          </p>
+                          <div class="cart-item__ctrl">
+                            <div class="cart-item__input">
+                              <span> LavAzza</span>
+                              <img
+                                src="./assets/icon/arrow-down.svg"
+                                alt=""
+                                class="cart-item__icon"
+                              />
+                            </div>
+
+                            <div class="cart-item__input">
+                              <button class="cart-item__input-btn">
+                                <img
+                                  src="./assets/icon/minus.svg"
+                                  alt=""
+                                  class="cart-item__icon"
+                                />
+                              </button>
+                              <span>1</span>
+                              <button class="cart-item__input-btn">
+                                <img
+                                  src="./assets/icon/plus.svg "
+                                  alt=""
+                                  class="cart-item__icon"
+                                />
+                              </button>
+                            </div>
+                          </div>
+                        </h3>
+                      </div>
+                      <div class="cart-item__content-right">
+                        <p class="cart-item__total-price">$47.00</p>
+                        <div class="cart-item__ctrl">
+                          <button class="cart-item__ctrl-btn">
+                            <img
+                              src="./assets/icon/heart-gray.svg"
+                              alt=""
+                              class="cart-item__ctrl-btn-icon"
+                            />
+                            Save
+                          </button>
+                          <button class="cart-item__ctrl-btn">
+                            <img
+                              src="./assets/icon/delete-gray.svg"
+                              alt=""
+                              class="cart-item__ctrl-btn-icon"
+                            />
+                            Delete
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+            <div class="col-4"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer  -->
+    <footer id="footer" class="footer"></footer>
+    <script>
+      load("footer", "./templates/footer.html");
+    </script>
+  </body>
+</html>
