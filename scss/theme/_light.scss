@@ -75,6 +75,10 @@ html {
   // Text Content
   --text-content-hr-bg: #ebebeb;
 
+  // Action dropdown
+  --act-dropdown-bg: #fff;
+  --act-dropdown-shadow: rgba(200, 200, 200, 0.4);
+
   @include abstracts.screen(lg) {
     --header-bg-color: #fff;
     --header-shadow-color: rgba(237, 237, 246, 0.2);

@@ -217,6 +217,7 @@
   }
 
   &__btn {
+    position: relative;
     @extend %flexItemsCenter;
     padding: 10px 20px;
     gap: 10px;
@@ -265,5 +266,128 @@
   &__qnt {
     @extend .nav-btn__title;
     margin-left: auto;
+  }
+}
+
+.act-dropdown {
+  position: absolute;
+  top: 60px;
+  right: -60px;
+  width: min(500px, 100vw);
+
+  &__inner {
+    padding: 25px;
+    border-radius: 20px;
+    background: var(--act-dropdown-bg);
+    box-shadow: 0 40px 90px 20px rvar(--act-dropdown-shadow);
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    color: var(--auth-heading-color);
+    font-size: 2.2rem;
+    font-weight: 500;
+    line-height: 145.455%;
+  }
+
+  &__view-all {
+    color: #0071dc;
+    font-size: 2.2rem;
+    font-weight: 400;
+    line-height: 145.455%;
+  }
+
+  &__bottom {
+    margin: 20px 0;
+    padding: 20px 0;
+    border-width: 1px 0;
+    border-color: var(--top-menu-border-color);
+    border-style: solid;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__row + &__row {
+    margin-top: 10px;
+  }
+
+  &__label,
+  &__value {
+    color: var(--auth-heading-color);
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 145.455%;
+  }
+
+  &__row {
+    &--bold {
+      .act-dropdown__label,
+      .act-dropdown__value {
+        font-weight: 500;
+      }
+    }
+  }
+
+  &__checkout {
+    display: flex;
+    justify-content: flex-end;
+
+    &-btn {
+      min-width: 200px;
+      height: 58px !important;
+      font-size: 1.8rem !important;
+      color: #000000;
+    }
+  }
+
+  &__list {
+    padding-bottom: 10px;
+    flex-wrap: nowrap;
+    // overflow-x: hidden;
+    overflow-x: auto;
+  }
+}
+
+.cart-preview-item {
+  text-align: left;
+  &__img-wrap {
+    position: relative;
+    padding-top: 100%;
+
+    border: 1.5px solid #ebebeb;
+    border-radius: 10px;
+  }
+
+  &__thumb {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  &__title {
+    margin-top: 14px;
+    color: var(--auth-intro-text-color);
+    font-size: 1.4rem;
+    line-height: 142.857%;
+  }
+
+  &__price {
+    margin-top: 6px;
+    color: var(--auth-intro-text-color);
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 146.667%;
   }
 }
