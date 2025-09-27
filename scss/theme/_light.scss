@@ -89,6 +89,12 @@ html {
   --cart-item-input-icon-color: brightness(0) saturate(100%) invert(7%)
     sepia(67%) saturate(713%) hue-rotate(213deg) brightness(97%) contrast(95%);
   --cart-item-input-title-color: #1a162e;
+  --gift-icon-bg: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.9) 0%,
+      rgba(255, 255, 255, 0.9) 100%
+    ),
+    #7644e1;
 
   @include abstracts.screen(lg) {
     --header-bg-color: #fff;

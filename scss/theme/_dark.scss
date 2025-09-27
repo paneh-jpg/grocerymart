@@ -94,6 +94,7 @@ html.dark {
   --cart-item-input-icon-color: brightness(0) saturate(100%) invert(83%)
     sepia(0%) saturate(0%) hue-rotate(10deg) brightness(94%) contrast(83%);
   --cart-item-input-title-color: #b9babe;
+  --gift-icon-bg: #292e39;
 
   @include abstracts.screen(lg) {
     --header-shadow-color: rgba(0, 0, 0, 0.2);
