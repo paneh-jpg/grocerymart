@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -150,7 +150,10 @@
 
                             Save
                           </button>
-                          <button class="cart-item__ctrl-btn">
+                          <button
+                            class="cart-item__ctrl-btn js-toggle"
+                            toggle-target="#delete-confirm"
+                          >
                             <img
                               src="./assets/icon/delete-gray.svg"
                               alt=""
@@ -222,7 +225,10 @@
                             />
                             Save
                           </button>
-                          <button class="cart-item__ctrl-btn">
+                          <button
+                            class="cart-item__ctrl-btn js-toggle"
+                            toggle-target="#delete-confirm"
+                          >
                             <img
                               src="./assets/icon/delete-gray.svg"
                               alt=""
@@ -294,7 +300,10 @@
                             />
                             Save
                           </button>
-                          <button class="cart-item__ctrl-btn">
+                          <button
+                            class="cart-item__ctrl-btn js-toggle"
+                            toggle-target="#delete-confirm"
+                          >
                             <img
                               src="./assets/icon/delete-gray.svg"
                               alt=""
@@ -401,5 +410,30 @@
     <script>
       load("footer", "./templates/footer.html");
     </script>
+
+    <!-- Dialog / Model  -->
+    <div class="dialog hide" id="delete-confirm">
+      <div class="dialog__content">
+        <div class="dialog__text">Lorem ipsum dolor sit amet consectetur?</div>
+        <div class="dialog__bottom">
+          <button
+            class="btn btn--text btn--small dialog__btn js-toggle"
+            toggle-target="#delete-confirm"
+          >
+            Cancel
+          </button>
+          <button
+            class="btn btn--primary btn--no-margin btn--small dialog__btn js-toggle"
+            toggle-target="#delete-confirm"
+          >
+            Confirm
+          </button>
+        </div>
+      </div>
+      <div
+        class="dialog__overlay js-toggle"
+        toggle-target="#delete-confirm"
+      ></div>
+    </div>
   </body>
 </html>

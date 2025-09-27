@@ -2292,12 +2292,16 @@ input {
   font-size: 1.8rem;
   font-weight: 500;
   user-select: none;
+  white-space: nowrap;
 }
 .btn + .btn:not(.btn--no-margin) {
   margin-left: 20px;
 }
+.btn--small {
+  height: 40px;
+  padding: 0 16px;
+}
 .btn--text {
-  color: #9e9da8;
   background: transparent;
   font-weight: 400;
 }
@@ -2907,6 +2911,69 @@ input {
   border: none;
   height: 1.5px;
   background: var(--text-content-hr-bg);
+}
+
+.dialog__overlay, .dialog {
+  position: fixed;
+  inset: 0;
+}
+
+.dialog {
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: opacity, visibility;
+  transition-duration: 0.2s;
+}
+.dialog.show {
+  opacity: 1;
+  visibility: visible;
+}
+.dialog__overlay {
+  background: rgba(0, 0, 0, 0.4);
+}
+.dialog__content {
+  position: relative;
+  z-index: 100;
+  max-width: min(450px, 100% - 40px);
+  padding: 30px;
+  border-radius: 20px;
+  background-color: var(--checkout-bg-color);
+  box-shadow: 0 20px 60px 10px var(--checkout-shadow);
+}
+@media (max-width: 767.98px) {
+  .dialog__content {
+    padding: 20px;
+  }
+}
+.dialog__text {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%;
+}
+.dialog__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 30px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+@media (max-width: 767.98px) {
+  .dialog__bottom {
+    gap: 20px;
+  }
+}
+@media (max-width: 767.98px) {
+  .dialog__btn {
+    flex: 1;
+  }
+}
+.dialog__btn:last-child {
+  color: #1a162e;
 }
 
 html.dark {
