@@ -83,7 +83,6 @@
 
   &__label,
   &__continue-link {
-    color: var(--cart-item-input-title-color);
     font-size: 1.8rem;
     font-weight: 500;
     line-height: 144.444%;
@@ -177,7 +176,6 @@
   }
 
   &__title {
-    color: var(--cart-item-input-title-color);
     max-width: 374px;
     font-size: 1.8rem;
     font-weight: 500;
@@ -241,7 +239,6 @@
     font-size: 2.2rem;
     font-weight: 700;
     line-height: 145.455%;
-    color: var(--cart-item-input-title-color);
     text-align: right;
 
     @include abstracts.screen(md) {
@@ -299,7 +296,6 @@
   }
 
   &__title {
-    color: var(--cart-item-input-title-color);
     font-size: 1.8rem;
     font-weight: 500;
     line-height: 144.444%;
@@ -307,7 +303,6 @@
 
   &__desc {
     margin-top: 10px;
-    color: var(--cart-item-input-title-color);
     font-size: 1.4rem;
     font-weight: 400;
     line-height: 142.857%;
