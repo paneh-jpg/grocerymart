@@ -33,9 +33,17 @@
   background-color: var(--checkout-bg-color);
   box-shadow: 0 20px 60px 10px var(--checkout-shadow);
 
+  @include abstracts.screen(sm) {
+    padding: 16px;
+  }
+
   &__list {
     border: none;
     margin-top: -30px;
+
+    @include abstracts.screen(sm) {
+      margin-top: -16px;
+    }
   }
 
   &__bottom {
@@ -115,10 +123,36 @@
   padding: 30px 0;
   border-bottom: 1px solid var(--cart-item-input-border-color);
 
+  @include abstracts.screen(md) {
+    &:last-child {
+      border: none;
+    }
+  }
+
+  @include abstracts.screen(sm) {
+    gap: 16px;
+    padding: 16px 0;
+  }
+
   &__thumb {
     width: 172px;
     height: 172px;
     object-fit: contain;
+
+    @include abstracts.screen(xxl) {
+      width: 150px;
+      height: 150px;
+    }
+
+    @include abstracts.screen(lg) {
+      width: 100px;
+      height: 100px;
+    }
+
+    @include abstracts.screen(sm) {
+      width: 60px;
+      height: 60px;
+    }
   }
 
   &__content {
@@ -135,6 +169,11 @@
       flex-direction: column;
       padding-bottom: 10px;
     }
+
+    @include abstracts.screen(md) {
+      flex-direction: column;
+      gap: 16px;
+    }
   }
 
   &__title {
@@ -143,6 +182,12 @@
     font-size: 1.8rem;
     font-weight: 500;
     line-height: 144.444%;
+
+    @include abstracts.screen(sm) {
+      max-width: 233px;
+      font-size: 1.4rem;
+      line-height: 142.857%;
+    }
   }
 
   &__price-wrap {
@@ -161,6 +206,10 @@
     display: flex;
     align-items: center;
     gap: 20px;
+
+    @include abstracts.screen(md) {
+      gap: 15px;
+    }
   }
 
   &__input {
@@ -194,10 +243,27 @@
     line-height: 145.455%;
     color: var(--cart-item-input-title-color);
     text-align: right;
+
+    @include abstracts.screen(md) {
+      text-align: left;
+    }
+
+    @include abstracts.screen(sm) {
+      font-size: 1.8rem;
+    }
   }
 
   &__ctrl {
     margin-top: auto;
+
+    @include abstracts.screen(md) {
+      margin-top: 16px;
+      &--column {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+    }
   }
 
   &__ctrl-btn {
