@@ -78,6 +78,8 @@ html {
   // Action dropdown
   --act-dropdown-bg: #fff;
   --act-dropdown-shadow: rgba(200, 200, 200, 0.4);
+  --arrow-up: brightness(0) saturate(100%) invert(100%) sepia(91%) saturate(38%)
+    hue-rotate(254deg) brightness(110%) contrast(110%);
 
   @include abstracts.screen(lg) {
     --header-bg-color: #fff;
