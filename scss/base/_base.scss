@@ -41,7 +41,28 @@ input {
   outline: none;
   border: none;
   padding: 0;
+}
+
+input,
+textarea {
   background: transparent;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+input:-webkit-autofill:hover,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill:active,
+textarea:-webkit-autofill:hover,
+select:-webkit-autofill,
+select:-webkit-autofill:focus,
+select:-webkit-autofill:active,
+select:-webkit-autofill:hover {
+  -webkit-box-shadow: 0 0 0 1000px var(--checkout-bg-color) inset !important; /* đổi "white" theo màu nền mong muốn */
+
+  -webkit-text-fill-color: var(--text-color) !important; /* màu chữ */
 }
 
 .icon {

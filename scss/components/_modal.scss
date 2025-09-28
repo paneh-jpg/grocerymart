@@ -49,7 +49,7 @@
 
   &__body {
     padding-right: 20px;
-    max-height: calc(100vh - 200px);
+    max-height: calc(100vh - 180px);
     overflow-y: auto;
   }
 
@@ -57,15 +57,15 @@
     position: relative;
     z-index: 100;
 
-    padding: 30px;
+    padding: 30px 10px 30px 30px;
     width: min(var(--content-width, 800px), 100% - 40px);
 
     border-radius: 20px;
     background-color: var(--checkout-bg-color);
     box-shadow: 0 20px 60px 10px var(--checkout-shadow);
 
-    @include abstracts.screen(md) {
-      padding: 20px;
+    @include abstracts.screen(sm) {
+      padding: 20px 0px 20px 20px;
     }
   }
 
@@ -99,6 +99,11 @@
 
     @include abstracts.screen(md) {
       gap: 20px;
+      margin-top: 20px;
+      margin-right: 20px;
+      > * {
+        flex: 1;
+      }
     }
   }
 
