@@ -6,6 +6,15 @@
     pointer-events: none !important;
   }
 
+  &__row {
+    display: flex;
+    gap: 30px;
+
+    > * {
+      flex: 1;
+    }
+  }
+
   &__group {
     margin-top: 30px;
 
@@ -47,12 +56,13 @@
     animation: shake 0.4s;
   }
 
+  &__text-area,
   &__text-input {
-    height: 50px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    padding: 0px 12px;
     border-radius: 10px;
     border: 1.5px solid var(--text-input-border-color);
 
@@ -60,15 +70,38 @@
       border-color: #77dae6;
     }
 
-    @include abstracts.screen(md) {
-      height: 48px;
+    &--small {
+      border-radius: 8px;
     }
   }
 
-  &__input {
+  &__text-area {
+    padding: 12px;
+    height: 100px;
+
+    &-input {
+      width: 100%;
+      resize: none;
+    }
+  }
+
+  &__text-input {
+    height: 50px;
+
+    @include abstracts.screen(md) {
+      height: 48px;
+    }
+
+    &--small {
+      height: 42px;
+    }
+  }
+
+  &__input,
+  &__text-area-input {
     flex: 1;
     height: 100%;
-    padding: 0 12px;
+
     font-size: 1.8rem;
     font-weight: 500;
     line-height: 144.444%;
@@ -79,6 +112,12 @@
 
     @include abstracts.screen(md) {
       font-size: 1.6rem;
+    }
+  }
+
+  &__input {
+    &-icon {
+      margin-left: 12px;
     }
   }
 

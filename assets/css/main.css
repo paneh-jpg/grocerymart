@@ -2568,6 +2568,13 @@ input {
   opacity: 0.5;
   pointer-events: none !important;
 }
+.form__row {
+  display: flex;
+  gap: 30px;
+}
+.form__row > * {
+  flex: 1;
+}
 .form__group {
   margin-top: 30px;
 }
@@ -2599,37 +2606,56 @@ input {
 .form__error-icon {
   animation: shake 0.4s;
 }
-.form__text-input {
-  height: 50px;
+.form__text-area, .form__text-input {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0px 12px;
   border-radius: 10px;
   border: 1.5px solid var(--text-input-border-color);
 }
-.form__text-input:focus-within {
+.form__text-area:focus-within, .form__text-input:focus-within {
   border-color: #77dae6;
+}
+.form__text-area--small, .form__text-input--small {
+  border-radius: 8px;
+}
+.form__text-area {
+  padding: 12px;
+  height: 100px;
+}
+.form__text-area-input {
+  width: 100%;
+  resize: none;
+}
+.form__text-input {
+  height: 50px;
 }
 @media (max-width: 767.98px) {
   .form__text-input {
     height: 48px;
   }
 }
-.form__input {
+.form__text-input--small {
+  height: 42px;
+}
+.form__input, .form__text-area-input {
   flex: 1;
   height: 100%;
-  padding: 0 12px;
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 144.444%;
 }
-.form__input::placeholder {
+.form__input::placeholder, .form__text-area-input::placeholder {
   color: var(--form-placeholder-color);
 }
 @media (max-width: 767.98px) {
-  .form__input {
+  .form__input, .form__text-area-input {
     font-size: 1.6rem;
   }
+}
+.form__input-icon {
+  margin-left: 12px;
 }
 .form__error {
   text-align: left;
@@ -2912,12 +2938,12 @@ input {
   background: var(--text-content-hr-bg);
 }
 
-.dialog__overlay, .dialog {
+.modal__overlay, .modal {
   position: fixed;
   inset: 0;
 }
 
-.dialog {
+.modal {
   z-index: 99;
   display: flex;
   align-items: center;
@@ -2927,33 +2953,67 @@ input {
   transform: opacity, visibility;
   transition-duration: 0.2s;
 }
-.dialog.show {
+.modal__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 102;
+  color: #000000;
+  font-size: 3rem;
+  padding: 3px 30px;
+  opacity: 0.7;
+}
+.modal__close:hover {
+  opacity: 1;
+}
+.modal.show {
   opacity: 1;
   visibility: visible;
 }
-.dialog__overlay {
+.modal__overlay {
   background: rgba(0, 0, 0, 0.4);
 }
-.dialog__content {
+.modal__heading {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 140%;
+}
+.modal__body {
+  padding-right: 20px;
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+}
+.modal__content {
   position: relative;
   z-index: 100;
-  max-width: min(450px, 100% - 40px);
   padding: 30px;
+  width: min(var(--content-width, 800px), 100% - 40px);
   border-radius: 20px;
   background-color: var(--checkout-bg-color);
   box-shadow: 0 20px 60px 10px var(--checkout-shadow);
 }
 @media (max-width: 767.98px) {
-  .dialog__content {
+  .modal__content {
     padding: 20px;
   }
 }
-.dialog__text {
+.modal--small .modal__content {
+  --content-width: 400px;
+}
+.modal--fill .modal__content {
+  --content-width: 100%;
+  height: 100%;
+  border-radius: 0;
+}
+.modal--large .modal__content {
+  --content-width: 1100px;
+}
+.modal__text {
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 144.444%;
 }
-.dialog__bottom {
+.modal__bottom {
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -2962,16 +3022,16 @@ input {
   flex-wrap: wrap;
 }
 @media (max-width: 767.98px) {
-  .dialog__bottom {
+  .modal__bottom {
     gap: 20px;
   }
 }
 @media (max-width: 767.98px) {
-  .dialog__btn {
+  .modal__btn {
     flex: 1;
   }
 }
-.dialog__btn:last-child {
+.modal__btn:last-child {
   color: #1a162e;
 }
 

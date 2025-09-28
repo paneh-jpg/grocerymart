@@ -112,7 +112,8 @@
                       </p>
                     </div>
                     <button
-                      class="btn btn--primary btn--rounded user-address__btn btn--small"
+                      class="btn btn--primary btn--rounded user-address__btn btn--small js-toggle"
+                      toggle-target="#add-new-address"
                     >
                       <img
                         src="./assets/icon/plus.svg"
@@ -126,7 +127,7 @@
                     <!-- Empty Message -->
                     <!-- <p class="user-address__message">
                       Not address yet.
-                      <a href="" class="user-address__link">
+                      <a href="" class="user-address__link js-toggle"  toggle-target="#add-new-address">
                         Add a new Address
                       </a>
                     </p> -->
@@ -538,19 +539,20 @@
       load("footer", "./templates/footer.html");
     </script>
 
-    <!-- Dialog / Model  -->
-    <div class="dialog hide" id="delete-confirm">
-      <div class="dialog__content">
-        <div class="dialog__text">Lorem ipsum dolor sit amet consectetur?</div>
-        <div class="dialog__bottom">
+    <!-- modal: Confirm remove shopping cart item  -->
+    <div class="modal modal--small hide" id="delete-confirm">
+      <!-- <button class="modal__close">&times;</button> -->
+      <div class="modal__content">
+        <div class="modal__text">Lorem ipsum dolor sit amet consectetur?</div>
+        <div class="modal__bottom">
           <button
-            class="btn btn--text btn--small dialog__btn js-toggle"
+            class="btn btn--text btn--small modal__btn js-toggle"
             toggle-target="#delete-confirm"
           >
             Cancel
           </button>
           <button
-            class="btn btn--primary btn--no-margin btn--small dialog__btn js-toggle"
+            class="btn btn--primary btn--no-margin btn--small modal__btn js-toggle"
             toggle-target="#delete-confirm"
           >
             Confirm
@@ -558,9 +560,138 @@
         </div>
       </div>
       <div
-        class="dialog__overlay js-toggle"
+        class="modal__overlay js-toggle"
         toggle-target="#delete-confirm"
       ></div>
+    </div>
+
+    <!-- modal: Add new shopping address -->
+    <div class="modal show" id="add-new-address">
+      <!-- <button class="modal__close">&times;</button> -->
+      <div class="modal__content">
+        <h2 class="modal__heading">Add new shopping address</h2>
+        <div class="modal__body">
+          <form action="" class="form">
+            <div class="form__row">
+              <div class="form__group">
+                <label for="name" class="form__label form__label--small"
+                  >Name</label
+                >
+                <div class="form__text-input">
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Name"
+                    id="name"
+                    class="form__input"
+                    required
+                    minlength="2"
+                  />
+                  <img
+                    src="./assets/icon/warning.svg"
+                    alt=""
+                    class="form__error-icon form__pull-right"
+                  />
+                </div>
+                <p class="form__error">Name must be at least 2 characters</p>
+              </div>
+              <div class="form__group">
+                <label for="phone" class="form__label form__label--small"
+                  >Phone</label
+                >
+                <div class="form__text-input">
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Phone"
+                    id="phone"
+                    class="form__input"
+                    required
+                    minlength="10"
+                  />
+                  <img
+                    src="./assets/icon/warning.svg"
+                    alt=""
+                    class="form__error-icon form__pull-right"
+                  />
+                </div>
+                <p class="form__error">Phone must be at least 11 characters</p>
+              </div>
+            </div>
+            <div class="form__group">
+              <label for="address" class="form__label form__label--small"
+                >Address</label
+              >
+              <div class="form__text-area">
+                <textarea
+                  name="address"
+                  placeholder="Address (Area and street)"
+                  id="address"
+                  class="form__text-area-input form__text-area-input--small"
+                  required
+                ></textarea>
+                <img
+                  src="./assets/icon/warning.svg"
+                  alt=""
+                  class="form__error-icon form__pull-right"
+                />
+              </div>
+              <p class="form__error">Address not empty.</p>
+            </div>
+            <div class="form__group">
+              <label for="city" class="form__label form__label--small"
+                >City/District/Town</label
+              >
+              <div class="form__text-input">
+                <input
+                  id="city"
+                  type="text"
+                  name=""
+                  placeholder="City/District/Town"
+                  class="form__input"
+                />
+                <!-- <img
+                    src="./assets/icon/message.svg"
+                    alt=""
+                    class="form__input-icon"
+                  /> -->
+                <img
+                  src="./assets/icon/warning.svg"
+                  alt=""
+                  class="form__error-icon form__pull-right"
+                />
+              </div>
+              <p class="form__error">Phone must be at least 11 characters</p>
+            </div>
+            <div class="form__group form__group--inline">
+              <label class="form__checkbox">
+                <input
+                  type="checkbox"
+                  name=""
+                  id=""
+                  class="form__checkbox-input d-none"
+                />
+                <span class="form__checkbox-label">Set as default address</span>
+              </label>
+            </div>
+          </form>
+        </div>
+        <div class="modal__bottom">
+          <button
+            class="btn btn--text btn--small modal__btn js-toggle"
+            toggle-target="#add-new-address"
+          >
+            Cancel
+          </button>
+          <button
+            class="btn btn--primary btn--no-margin btn--small modal__btn js-toggle"
+            toggle-target="#add-new-address"
+          >
+            Create
+          </button>
+        </div>
+      </div>
+      <div class="modal__overlay"></div>
     </div>
   </body>
 </html>
