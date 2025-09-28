@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Checkout | Grocery Mart</title>
+    <title>Shipping | Grocery Mart</title>
 
     <!-- Favicon  -->
     <link
@@ -74,10 +74,19 @@
                 />
               </a>
             </li>
-
+            <li>
+              <a href="#!" class="breadcrumb__link">
+                Checkout
+                <img
+                  src="./assets/icon/arrow-right.svg"
+                  alt=""
+                  class="breadcrumb__icon icon"
+                />
+              </a>
+            </li>
             <li>
               <a href="#!" class="breadcrumb__link breadcrumb__link--current">
-                Checkout
+                Shipping
               </a>
             </li>
           </ul>
@@ -88,6 +97,100 @@
           <div class="row gy-xl-3">
             <div class="col-8 col-xl-12">
               <div class="cart-info">
+                <h1 class="cart-info__heading">
+                  1. Shipping, arrives between Mon, May 16—Tue, May 24
+                </h1>
+                <div class="cart-info__separate"></div>
+
+                <!-- Checkout address  -->
+                <div class="user-address">
+                  <div class="user-address__top">
+                    <div class="user-address__top-left">
+                      <h2 class="user-address__title">Shipping address</h2>
+                      <p class="user-address__desc">
+                        Where should we deliver your order?
+                      </p>
+                    </div>
+                    <button
+                      class="btn btn--primary btn--rounded user-address__btn"
+                    >
+                      <img
+                        src="./assets/icon/plus.svg"
+                        alt=""
+                        class="user-address__btn-icon"
+                      />
+                      Add a new address
+                    </button>
+                  </div>
+                  <div class="user-address__list">
+                    <article class="address-cart">
+                      <div class="address-cart__left">
+                        <div class="address-cart__choose">
+                          <!-- Custom checkbox -->
+                        </div>
+                        <div class="address-cart__info">
+                          <h3 class="address-cart__title">Imran Khan</h3>
+                          <p class="address-cart__desc">
+                            Museum of Rajas, Sylhet Sadar, Sylhet 3100.
+                          </p>
+                          <ul class="address-cart__list">
+                            <li class="address-cart__item">Shipping</li>
+                            <li class="address-cart__item">
+                              Delivery from store
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="address-cart__right">
+                        <div class="address-cart__ctrl">
+                          <button class="address-cart__ctrl-btn">
+                            <img
+                              src="./assets/icon/edit.svg"
+                              alt=""
+                              class="address-cart__ctrl-btn-icon"
+                            />
+                            Edit
+                          </button>
+                        </div>
+                      </div>
+                    </article>
+
+                    <article class="address-cart">
+                      <div class="address-cart__left">
+                        <div class="address-cart__choose">
+                          <!-- Custom checkbox -->
+                        </div>
+                        <div class="address-cart__info">
+                          <h3 class="address-cart__title">Imran Khan</h3>
+                          <p class="address-cart__desc">
+                            Al Hamra City (10th Floor), Hazrat Shahjalal Road,
+                            Sylhet, Sylhet, Bangladesh
+                          </p>
+                          <ul class="address-cart__list">
+                            <li class="address-cart__item">Shipping</li>
+                            <li class="address-cart__item">
+                              Delivery from store
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="address-cart__right">
+                        <div class="address-cart__ctrl">
+                          <button class="address-cart__ctrl-btn">
+                            <img
+                              src="./assets/icon/edit.svg"
+                              alt=""
+                              class="address-cart__ctrl-btn-icon"
+                            />
+                            Edit
+                          </button>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+
+                <h2 class="cart-info__sub-heading">Items details</h2>
                 <div class="cart-info__list">
                   <!-- Cart Item 1 -->
                   <article class="cart-item">
@@ -374,12 +477,9 @@
                   <span class="cart-info__label">Total:</span>
                   <span class="cart-info__label">$201.65</span>
                 </div>
-                <a
-                  href="./shipping.html"
-                  class="btn btn--primary btn--rounded cart-info__btn"
-                >
+                <button class="btn btn--primary btn--rounded cart-info__btn">
                   Continue to checkout
-                </a>
+                </button>
               </div>
               <div class="cart-info cart-info__gift">
                 <a href="#!">
