@@ -327,6 +327,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 16px;
+
+    @include abstracts.screen(md) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   &__title {
@@ -346,12 +352,31 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
+    color: #1a162e;
+
+    @include abstracts.screen(md) {
+      height: 46px;
+    }
+  }
+
+  &__message {
+    margin-top: 30px;
+    font-weight: 500;
+  }
+
+  &__link {
+    color: #0071dc;
   }
 }
 
 .address-cart {
   margin-top: 30px;
   display: flex;
+  gap: 16px;
+
+  @include abstracts.screen(md) {
+    flex-direction: column;
+  }
 
   &__left {
     flex: 1;
@@ -366,6 +391,7 @@
   }
 
   &__desc {
+    width: min(520px, 90%);
     margin-top: 4px;
     font-size: 1.5rem;
     line-height: 146.667%;
@@ -377,6 +403,12 @@
     align-items: center;
     gap: 30px;
     list-style: disc inside;
+
+    @include abstracts.screen(sm) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
   }
 
   &__item {
@@ -398,5 +430,21 @@
 
     font-size: 1.8rem;
     line-height: 144.444%;
+  }
+
+  &__checkbox {
+    &-input {
+      appearance: none;
+
+      &::before {
+        content: url(../../assets/icon/checkbox-uncheck.svg);
+        filter: var(--icon-color);
+      }
+
+      &:checked::before {
+        content: url(../../assets/icon/checkbox-checked.svg);
+        filter: none;
+      }
+    }
   }
 }

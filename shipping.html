@@ -112,7 +112,7 @@
                       </p>
                     </div>
                     <button
-                      class="btn btn--primary btn--rounded user-address__btn"
+                      class="btn btn--primary btn--rounded user-address__btn btn--small"
                     >
                       <img
                         src="./assets/icon/plus.svg"
@@ -123,10 +123,27 @@
                     </button>
                   </div>
                   <div class="user-address__list">
+                    <!-- Empty Message -->
+                    <!-- <p class="user-address__message">
+                      Not address yet.
+                      <a href="" class="user-address__link">
+                        Add a new Address
+                      </a>
+                    </p> -->
+
+                    <!-- Address Card 1 -->
                     <article class="address-cart">
                       <div class="address-cart__left">
                         <div class="address-cart__choose">
                           <!-- Custom checkbox -->
+                          <label class="address-cart__checkbox">
+                            <input
+                              type="checkbox"
+                              class="address-cart__checkbox-input"
+                              name=""
+                              checked
+                            />
+                          </label>
                         </div>
                         <div class="address-cart__info">
                           <h3 class="address-cart__title">Imran Khan</h3>
@@ -147,18 +164,25 @@
                             <img
                               src="./assets/icon/edit.svg"
                               alt=""
-                              class="address-cart__ctrl-btn-icon"
+                              class="address-cart__ctrl-btn-icon icon"
                             />
                             Edit
                           </button>
                         </div>
                       </div>
                     </article>
-
+                    <!-- Address Card 2 -->
                     <article class="address-cart">
                       <div class="address-cart__left">
                         <div class="address-cart__choose">
                           <!-- Custom checkbox -->
+                          <label class="address-cart__checkbox">
+                            <input
+                              type="checkbox"
+                              class="address-cart__checkbox-input"
+                              name=""
+                            />
+                          </label>
                         </div>
                         <div class="address-cart__info">
                           <h3 class="address-cart__title">Imran Khan</h3>
@@ -180,7 +204,7 @@
                             <img
                               src="./assets/icon/edit.svg"
                               alt=""
-                              class="address-cart__ctrl-btn-icon"
+                              class="address-cart__ctrl-btn-icon icon"
                             />
                             Edit
                           </button>
@@ -189,7 +213,7 @@
                     </article>
                   </div>
                 </div>
-
+                <div class="cart-info__separate"></div>
                 <h2 class="cart-info__sub-heading">Items details</h2>
                 <div class="cart-info__list">
                   <!-- Cart Item 1 -->

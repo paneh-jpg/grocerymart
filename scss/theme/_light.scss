@@ -96,6 +96,9 @@ html {
     ),
     #7644e1;
 
+  --address-cart-checkbox-icon: brightness(0) saturate(100%) invert(8%)
+    sepia(6%) saturate(7490%) hue-rotate(213deg) brightness(99%) contrast(95%);
+
   @include abstracts.screen(lg) {
     --header-bg-color: #fff;
     --header-shadow-color: rgba(237, 237, 246, 0.2);

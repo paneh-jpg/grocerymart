@@ -95,6 +95,8 @@ html.dark {
     sepia(0%) saturate(0%) hue-rotate(10deg) brightness(94%) contrast(83%);
   --cart-item-input-title-color: #b9babe;
   --gift-icon-bg: #292e39;
+  --address-cart-checkbox-icon: brightness(0) saturate(100%) invert(100%)
+    sepia(0%) saturate(0%) hue-rotate(338deg) brightness(111%) contrast(101%);
 
   @include abstracts.screen(lg) {
     --header-shadow-color: rgba(0, 0, 0, 0.2);

@@ -2299,7 +2299,6 @@ input {
 }
 .btn--small {
   height: 40px;
-  padding: 0 16px;
 }
 .btn--text {
   background: transparent;
@@ -3038,6 +3037,8 @@ html.dark {
     sepia(0%) saturate(0%) hue-rotate(10deg) brightness(94%) contrast(83%);
   --cart-item-input-title-color: #b9babe;
   --gift-icon-bg: #292e39;
+  --address-cart-checkbox-icon: brightness(0) saturate(100%) invert(100%)
+    sepia(0%) saturate(0%) hue-rotate(338deg) brightness(111%) contrast(101%);
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -3114,6 +3115,8 @@ html {
       rgba(255, 255, 255, 0.9) 100%
     ),
     #7644e1;
+  --address-cart-checkbox-icon: brightness(0) saturate(100%) invert(8%)
+    sepia(6%) saturate(7490%) hue-rotate(213deg) brightness(99%) contrast(95%);
 }
 @media (max-width: 991.98px) {
   html {
@@ -4047,6 +4050,13 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 16px;
+}
+@media (max-width: 767.98px) {
+  .user-address__top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 .user-address__title {
   font-size: 1.8rem;
@@ -4063,11 +4073,30 @@ html {
   align-items: center;
   justify-content: center;
   gap: 10px;
+  color: #1a162e;
+}
+@media (max-width: 767.98px) {
+  .user-address__btn {
+    height: 46px;
+  }
+}
+.user-address__message {
+  margin-top: 30px;
+  font-weight: 500;
+}
+.user-address__link {
+  color: #0071dc;
 }
 
 .address-cart {
   margin-top: 30px;
   display: flex;
+  gap: 16px;
+}
+@media (max-width: 767.98px) {
+  .address-cart {
+    flex-direction: column;
+  }
 }
 .address-cart__left {
   flex: 1;
@@ -4080,6 +4109,7 @@ html {
   line-height: 144.444%;
 }
 .address-cart__desc {
+  width: min(520px, 90%);
   margin-top: 4px;
   font-size: 1.5rem;
   line-height: 146.667%;
@@ -4090,6 +4120,13 @@ html {
   align-items: center;
   gap: 30px;
   list-style: disc inside;
+}
+@media (max-width: 575.98px) {
+  .address-cart__list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
 }
 .address-cart__item {
   font-size: 1.4rem;
@@ -4107,6 +4144,17 @@ html {
   align-items: center;
   font-size: 1.8rem;
   line-height: 144.444%;
+}
+.address-cart__checkbox-input {
+  appearance: none;
+}
+.address-cart__checkbox-input::before {
+  content: url(../../assets/icon/checkbox-uncheck.svg);
+  filter: var(--icon-color);
+}
+.address-cart__checkbox-input:checked::before {
+  content: url(../../assets/icon/checkbox-checked.svg);
+  filter: none;
 }
 
 /*# sourceMappingURL=main.css.map */
