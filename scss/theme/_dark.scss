@@ -63,12 +63,15 @@ html.dark {
   --text-input-border-color: #b9babe;
   --form-placeholder-color: #b9babe;
   --search-bar-bg: #171c28;
+  --form-select-dialog-shadow: rgba($color: #fff, $alpha: 0.15);
+  --form-select-dialog-bg: #171c28;
+  --form-option-hover-bg: #292e39;
 
   // Product Detail
   --product-detail-bg: #292e39;
   --prod-prop-form__tag-bg: #292e39;
   --product-container-bg: #171c28;
-  --prod-prop-heading-color: #eee;
+  --prod-prop-heading-color: #171c28;
 
   // Review
   --review-card-bg: #171c28;
