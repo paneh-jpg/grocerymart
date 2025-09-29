@@ -4170,6 +4170,12 @@ html {
   content: url(../../assets/icon/checkbox-checked.svg);
   filter: none;
 }
+.cart-info__checkbox-item {
+  margin-right: -10px;
+}
+.cart-info__check-all {
+  margin: 30px 0;
+}
 
 .cart-item {
   display: flex;
@@ -4187,6 +4193,12 @@ html {
     gap: 16px;
     padding: 16px 0;
   }
+}
+.cart-item__checkout-btn {
+  margin-top: auto;
+}
+.cart-item__all-checkout-btn {
+  margin-left: auto;
 }
 .cart-item__thumb {
   width: 172px;
@@ -4548,6 +4560,10 @@ html {
 
 .payment-item-2 {
   flex-direction: row;
+}
+
+.cart-info__cart-item-ctrl {
+  margin-top: 0;
 }
 
 /*# sourceMappingURL=main.css.map */

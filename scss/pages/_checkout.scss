@@ -197,6 +197,14 @@
         filter: none;
       }
     }
+
+    &-item {
+      margin-right: -10px;
+    }
+  }
+
+  &__check-all {
+    margin: 30px 0;
   }
 }
 
@@ -215,6 +223,14 @@
   @include abstracts.screen(sm) {
     gap: 16px;
     padding: 16px 0;
+  }
+
+  &__checkout-btn {
+    margin-top: auto;
+  }
+
+  &__all-checkout-btn {
+    margin-left: auto;
   }
 
   &__thumb {
@@ -613,4 +629,8 @@
 
 .payment-item-2 {
   flex-direction: row;
+}
+
+.cart-info__cart-item-ctrl {
+  margin-top: 0;
 }
