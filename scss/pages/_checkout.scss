@@ -227,10 +227,25 @@
 
   &__checkout-btn {
     margin-top: auto;
+    width: 201px;
+    color: #1a162e;
+
+    @include abstracts.screen(xl) {
+      width: 160px;
+      margin-top: 16px;
+    }
   }
 
   &__all-checkout-btn {
+    width: 230px;
     margin-left: auto;
+    color: #1a162e;
+
+    @include abstracts.screen(sm) {
+      margin-left: 0;
+      margin-top: -15px;
+      width: 190px;
+    }
   }
 
   &__thumb {
@@ -303,7 +318,12 @@
   &__ctrl {
     display: flex;
     align-items: center;
+
     gap: 20px;
+
+    @include abstracts.screen(xl) {
+      flex-wrap: wrap;
+    }
 
     @include abstracts.screen(md) {
       gap: 15px;
@@ -633,4 +653,8 @@
 
 .cart-info__cart-item-ctrl {
   margin-top: 0;
+
+  @include abstracts.screen(xl) {
+    margin-top: 16px;
+  }
 }
