@@ -170,6 +170,13 @@
     }
   }
 
+  &__dialog-heading {
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 14px;
+  }
+
   &__search {
     display: flex;
     align-items: center;
@@ -197,16 +204,10 @@
     }
 
     @include abstracts.screen(sm) {
-      flex-direction: row-reverse;
-      margin-top: 30px;
-
-      &-icon {
-        margin-left: 0;
-      }
-
-      &-input {
-        padding-left: 8px;
-      }
+      padding: 0 14px;
+      margin: 10px 20px;
+      border: 1px solid #d2d1d6;
+      border-radius: 10px;
     }
   }
 
