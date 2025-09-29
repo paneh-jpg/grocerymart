@@ -95,6 +95,7 @@
   }
 
   &__text-input {
+    position: relative;
     height: 50px;
 
     @include abstracts.screen(md) {
@@ -128,6 +129,70 @@
   &__input {
     &-icon {
       margin-left: 12px;
+    }
+  }
+
+  &__select-dialog {
+    position: absolute;
+    bottom: 44px;
+    left: 10px;
+
+    min-width: 230px;
+    max-height: 300px;
+
+    display: flex;
+    flex-direction: column;
+
+    opacity: 0;
+    visibility: hidden;
+    translate: 0 8px;
+    transition: opacity 0.2s, visibility 0.2s, translate 0.2s;
+
+    background: #fff;
+    padding: 10px 0;
+    border: 1px solid #d2d1d6;
+    border-radius: 10px;
+
+    &.show {
+      opacity: 1;
+      visibility: visible;
+      translate: 0 0;
+    }
+  }
+
+  &__search {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #d2d1d6;
+    padding: 0 20px 10px;
+
+    &-input {
+      flex: 1;
+    }
+
+    &-icon {
+      width: 16px;
+    }
+  }
+
+  &__options-list {
+    flex: 1;
+    margin-top: 8px;
+    overflow-y: auto;
+    padding: 0;
+  }
+
+  &__option {
+    padding: 6px 20px;
+
+    &--current {
+      font-weight: 500;
+      background: rgba($color: #ffb700, $alpha: 0.4);
+    }
+
+    &:not(&--current):hover {
+      background: #ebebeb;
+      cursor: pointer;
     }
   }
 

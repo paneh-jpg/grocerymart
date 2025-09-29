@@ -60,9 +60,9 @@ select:-webkit-autofill,
 select:-webkit-autofill:focus,
 select:-webkit-autofill:active,
 select:-webkit-autofill:hover {
-  -webkit-box-shadow: 0 0 0 1000px var(--checkout-bg-color) inset !important; /* đổi "white" theo màu nền mong muốn */
-
-  -webkit-text-fill-color: var(--text-color) !important; /* màu chữ */
+  -webkit-box-shadow: 0 0 0 1000px var(--checkout-bg-color) inset !important;
+  -webkit-text-fill-color: var(--text-color) !important;
+  caret-color: var(--text-color);
 }
 
 .icon {

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -64,7 +64,7 @@
         <div class="checkout-container">
           <!-- Breadcrumbs -->
           <ul class="breadcrumb checkout-page__breadcrumb">
-            <li>
+            <li class="form__option">
               <a href="./" class="breadcrumb__link">
                 Home
                 <img
@@ -74,7 +74,7 @@
                 />
               </a>
             </li>
-            <li>
+            <li class="form__option">
               <a href="#!" class="breadcrumb__link">
                 Checkout
                 <img
@@ -84,7 +84,7 @@
                 />
               </a>
             </li>
-            <li>
+            <li class="form__option">
               <a href="#!" class="breadcrumb__link breadcrumb__link--current">
                 Shipping
               </a>
@@ -566,7 +566,7 @@
     </div>
 
     <!-- modal: Add new shipping address -->
-    <div class="modal show" id="add-new-address">
+    <div class="modal hide" id="add-new-address">
       <!-- <button class="modal__close">&times;</button> -->
       <div class="modal__content">
         <h2 class="modal__heading">Add new shipping address</h2>
@@ -574,9 +574,9 @@
           <form action="" class="form">
             <div class="form__row">
               <div class="form__group">
-                <label for="name" class="form__label form__label--small"
-                  >Name</label
-                >
+                <label for="name" class="form__label form__label--small">
+                  Name
+                </label>
                 <div class="form__text-input">
                   <input
                     type="text"
@@ -596,9 +596,9 @@
                 <p class="form__error">Name must be at least 2 characters</p>
               </div>
               <div class="form__group">
-                <label for="phone" class="form__label form__label--small"
-                  >Phone</label
-                >
+                <label for="phone" class="form__label form__label--small">
+                  Phone
+                </label>
                 <div class="form__text-input">
                   <input
                     type="tel"
@@ -619,9 +619,9 @@
               </div>
             </div>
             <div class="form__group">
-              <label for="address" class="form__label form__label--small"
-                >Address</label
-              >
+              <label for="address" class="form__label form__label--small">
+                Address
+              </label>
               <div class="form__text-area">
                 <textarea
                   name="address"
@@ -639,27 +639,74 @@
               <p class="form__error">Address not empty.</p>
             </div>
             <div class="form__group">
-              <label for="city" class="form__label form__label--small"
-                >City/District/Town</label
-              >
+              <label for="city" class="form__label form__label--small">
+                City/District/Town
+              </label>
               <div class="form__text-input">
                 <input
                   id="city"
                   type="text"
                   name=""
                   placeholder="City/District/Town"
-                  class="form__input"
+                  class="form__input js-toggle"
+                  toggle-target="#city-dialog"
+                  autocomplete="off"
                 />
-                <!-- <img
-                    src="./assets/icon/message.svg"
-                    alt=""
-                    class="form__input-icon"
-                  /> -->
                 <img
                   src="./assets/icon/warning.svg"
                   alt=""
                   class="form__error-icon form__pull-right"
                 />
+                <div class="form__select-dialog hide" id="city-dialog">
+                  <div class="form__search">
+                    <input
+                      type="text"
+                      placeholder="Search"
+                      class="form__search-input"
+                    />
+                    <img
+                      src="./assets/icon/search.svg"
+                      alt=""
+                      class="form__search-icon icon"
+                    />
+                  </div>
+                  <ul class="form__options-list">
+                    <li class="form__option">Ha Noi</li>
+                    <li class="form__option--current form__option">Hue</li>
+                    <li class="form__option">Lai Chau</li>
+                    <li class="form__option">Dien Bien</li>
+                    <li class="form__option">Son La</li>
+                    <li class="form__option">Lang Son</li>
+                    <li class="form__option">Quang Ninh</li>
+                    <li class="form__option">Thanh Hoa</li>
+                    <li class="form__option">Nghe An</li>
+                    <li class="form__option">Ha Tinh</li>
+                    <li class="form__option">Cao Bang</li>
+                    <li class="form__option">Tuyen Quang</li>
+                    <li class="form__option">Lao Cai</li>
+                    <li class="form__option">Thai Nguyen</li>
+                    <li class="form__option">Phu Tho</li>
+                    <li class="form__option">Bac Ninh</li>
+                    <li class="form__option">Hung Yen</li>
+                    <li class="form__option">Hai Phong</li>
+                    <li class="form__option">Ninh Binh</li>
+                    <li class="form__option">Quang Tri</li>
+                    <li class="form__option">Da Nang</li>
+                    <li class="form__option">Quang Ngai</li>
+                    <li class="form__option">Gia Lai</li>
+                    <li class="form__option">Khanh Hoa</li>
+                    <li class="form__option">Lam Dong</li>
+                    <li class="form__option">Dak Lak</li>
+                    <li class="form__option">Ho Chi Minh</li>
+                    <li class="form__option">Dong Nai</li>
+                    <li class="form__option">Tay Ninh</li>
+                    <li class="form__option">Can Tho</li>
+                    <li class="form__option">Vinh Long</li>
+                    <li class="form__option">Dong Thap</li>
+                    <li class="form__option">Ca Mau</li>
+                    <li class="form__option">An Giang</li>
+                  </ul>
+                </div>
               </div>
               <p class="form__error">Phone must be at least 11 characters</p>
             </div>
