@@ -6,6 +6,8 @@
 }
 
 .header {
+  position: relative;
+  z-index: 2;
   background-color: var(--header-bg-color);
 
   @include abstracts.screen(lg) {
@@ -37,6 +39,10 @@
       }
       &-img {
         width: 24px;
+      }
+
+      @include abstracts.screen(lg) {
+        margin-left: 15px;
       }
     }
   }

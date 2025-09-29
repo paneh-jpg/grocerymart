@@ -174,7 +174,7 @@
     font-size: 1.8rem;
     font-weight: 600;
     text-align: center;
-    padding: 14px;
+    padding: 20px;
   }
 
   &__search {
@@ -189,7 +189,7 @@
     height: 38px;
 
     @include abstracts.screen(lg) {
-      height: 42px;
+      height: 48px;
     }
 
     &-input {
@@ -201,11 +201,15 @@
     &-icon {
       margin-left: 10px;
       width: 16px;
+
+      @include abstracts.screen(sm) {
+        width: 20px;
+      }
     }
 
     @include abstracts.screen(sm) {
       padding: 0 14px;
-      margin: 10px 20px;
+      margin: 10px 30px;
       border: 1px solid #d2d1d6;
       border-radius: 10px;
     }
@@ -216,7 +220,7 @@
     position: absolute;
     right: 0;
     top: 0;
-    padding: 2px 18px;
+    padding: 6px 18px;
     opacity: 0.8;
   }
 
@@ -225,6 +229,11 @@
     margin-top: 8px;
     overflow-y: auto;
     overscroll-behavior: contain;
+
+    @supports (-webkit-touch-callout: none) {
+      min-height: -webkit-fill-available;
+      padding-bottom: 300px;
+    }
   }
 
   &__option {
@@ -241,7 +250,8 @@
     }
 
     @include abstracts.screen(lg) {
-      padding: 14px 20px;
+      padding: 18px 30px;
+      font-size: 1.6rem;
     }
   }
 
