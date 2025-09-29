@@ -2878,6 +2878,11 @@ select:-webkit-autofill:hover {
   font-weight: 500;
   line-height: 145.455%;
 }
+.form__label--medium {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%;
+}
 .form__label--small {
   font-size: 1.4rem;
   line-height: 142.857%;
@@ -3995,6 +4000,11 @@ html {
   background-color: var(--checkout-bg-color);
   box-shadow: 0 20px 60px 10px var(--checkout-shadow);
 }
+.checkout-page .form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 
 .checkout-container {
   margin-top: 40px;
@@ -4021,6 +4031,17 @@ html {
   .cart-info {
     padding: 16px;
   }
+}
+.cart-info__form {
+  margin-bottom: 30px;
+}
+.cart-info__desc {
+  margin-top: 6px;
+  font-size: 1.5rem;
+  line-height: 146.667%;
+}
+.cart-info__form-label {
+  padding-bottom: 20px;
 }
 .cart-info__list {
   border: none;

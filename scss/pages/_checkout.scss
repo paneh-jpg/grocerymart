@@ -10,6 +10,12 @@
     background-color: var(--checkout-bg-color);
     box-shadow: 0 20px 60px 10px var(--checkout-shadow);
   }
+
+  .form__group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 
 .checkout-container {
@@ -35,6 +41,20 @@
 
   @include abstracts.screen(sm) {
     padding: 16px;
+  }
+
+  &__form {
+    margin-bottom: 30px;
+  }
+
+  &__desc {
+    margin-top: 6px;
+    font-size: 1.5rem;
+    line-height: 146.667%;
+  }
+
+  &__form-label {
+    padding-bottom: 20px;
   }
 
   &__list {
