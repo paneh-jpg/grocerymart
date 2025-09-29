@@ -115,10 +115,22 @@
     width: 100%;
   }
 
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   &__heading {
     font-size: 2.4rem;
     font-weight: 700;
     line-height: 141.667%;
+
+    &--lv2 {
+      font-size: 2.2rem;
+      font-weight: 500;
+      line-height: 145.455%;
+    }
   }
 
   &__sub-heading {
@@ -126,6 +138,22 @@
     font-size: 1.8rem;
     font-weight: 500;
     line-height: 144.444%;
+  }
+
+  &__checkbox {
+    &-input {
+      appearance: none;
+
+      &::before {
+        content: url(../../assets/icon/checkbox-uncheck.svg);
+        filter: var(--icon-color);
+      }
+
+      &:checked::before {
+        content: url(../../assets/icon/checkbox-checked.svg);
+        filter: none;
+      }
+    }
   }
 }
 
@@ -431,20 +459,80 @@
     font-size: 1.8rem;
     line-height: 144.444%;
   }
+}
+
+.payment-item {
+  margin-top: 30px;
+  border-radius: 20px;
+  background: var(--payment-item-bg);
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  &__thumb {
+    width: 75px;
+    height: 59px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 20px 60px 10px var(--payment-item-thumb-shadow);
+  }
+
+  &__content {
+    flex: 1;
+  }
+
+  &__title {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 144.444%;
+  }
+
+  &__desc {
+    margin-top: 4px;
+  }
+
+  &__desc,
+  &__detail {
+    font-size: 1.5rem;
+    line-height: 146.667%;
+  }
+
+  &__detail {
+    font-weight: 500;
+    padding: 10px 0;
+    &:hover {
+      color: #0071dc;
+    }
+  }
+
+  &__cost {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 144.444%;
+    color: #9e9da8;
+  }
 
   &__checkbox {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 10px;
+
     &-input {
-      appearance: none;
-
       &::before {
-        content: url(../../assets/icon/checkbox-uncheck.svg);
-        filter: var(--icon-color);
-      }
-
-      &:checked::before {
-        content: url(../../assets/icon/checkbox-checked.svg);
+        content: url(../../assets/icon/checkbox-uncheck-gray.svg);
         filter: none;
       }
     }
+
+    &-input:checked + .payment-item__cost {
+      color: var(--text-color);
+    }
+  }
+
+  &__pointer {
+    cursor: pointer;
   }
 }

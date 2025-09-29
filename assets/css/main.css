@@ -1694,7 +1694,7 @@ select:-webkit-autofill:hover {
 .cart-preview-item__img-wrap {
   position: relative;
   padding-top: 100%;
-  border: 1.5px solid var(--top-menu-border-color);
+  border: 1px solid var(--top-menu-border-color);
   border-radius: 10px;
 }
 .cart-preview-item__thumb {
@@ -2655,7 +2655,7 @@ select:-webkit-autofill:hover {
   justify-content: space-between;
   padding: 0px 12px;
   border-radius: 10px;
-  border: 1.5px solid var(--text-input-border-color);
+  border: 1px solid var(--text-input-border-color);
 }
 .form__text-area:focus-within, .form__text-input:focus-within {
   border-color: #77dae6;
@@ -3091,7 +3091,7 @@ select:-webkit-autofill:hover {
 }
 .text-content hr {
   border: none;
-  height: 1.5px;
+  height: 1px;
   background: var(--text-content-hr-bg);
 }
 
@@ -3264,6 +3264,8 @@ html.dark {
   --gift-icon-bg: #292e39;
   --address-cart-checkbox-icon: brightness(0) saturate(100%) invert(100%)
     sepia(0%) saturate(0%) hue-rotate(338deg) brightness(111%) contrast(101%);
+  --payment-item-bg: #292e39;
+  --payment-item-thumb-shadow: none;
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -3345,6 +3347,8 @@ html {
     #7644e1;
   --address-cart-checkbox-icon: brightness(0) saturate(100%) invert(8%)
     sepia(6%) saturate(7490%) hue-rotate(213deg) brightness(99%) contrast(95%);
+  --payment-item-bg: #f6f6f6;
+  --payment-item-thumb-shadow: rgba(237, 237, 246, 0.2);
 }
 @media (max-width: 991.98px) {
   html {
@@ -3652,7 +3656,7 @@ html {
 .prod-preview__thumb-img {
   width: 65px;
   object-fit: contain;
-  border: 1.5px solid rgba(158, 157, 168, 0.4);
+  border: 1px solid rgba(158, 157, 168, 0.4);
   border-radius: 8px;
   opacity: 0.9;
   transition: all 0.5s ease;
@@ -4082,16 +4086,37 @@ html {
   margin-top: 26px;
   width: 100%;
 }
+.cart-info__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .cart-info__heading {
   font-size: 2.4rem;
   font-weight: 700;
   line-height: 141.667%;
+}
+.cart-info__heading--lv2 {
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 145.455%;
 }
 .cart-info__sub-heading {
   margin: 30px 0;
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 144.444%;
+}
+.cart-info__checkbox-input {
+  appearance: none;
+}
+.cart-info__checkbox-input::before {
+  content: url(../../assets/icon/checkbox-uncheck.svg);
+  filter: var(--icon-color);
+}
+.cart-info__checkbox-input:checked::before {
+  content: url(../../assets/icon/checkbox-checked.svg);
+  filter: none;
 }
 
 .cart-item {
@@ -4373,16 +4398,66 @@ html {
   font-size: 1.8rem;
   line-height: 144.444%;
 }
-.address-cart__checkbox-input {
-  appearance: none;
+
+.payment-item {
+  margin-top: 30px;
+  border-radius: 20px;
+  background: var(--payment-item-bg);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
-.address-cart__checkbox-input::before {
-  content: url(../../assets/icon/checkbox-uncheck.svg);
-  filter: var(--icon-color);
+.payment-item__thumb {
+  width: 75px;
+  height: 59px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 20px 60px 10px var(--payment-item-thumb-shadow);
 }
-.address-cart__checkbox-input:checked::before {
-  content: url(../../assets/icon/checkbox-checked.svg);
+.payment-item__content {
+  flex: 1;
+}
+.payment-item__title {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%;
+}
+.payment-item__desc {
+  margin-top: 4px;
+}
+.payment-item__desc, .payment-item__detail {
+  font-size: 1.5rem;
+  line-height: 146.667%;
+}
+.payment-item__detail {
+  font-weight: 500;
+  padding: 10px 0;
+}
+.payment-item__detail:hover {
+  color: #0071dc;
+}
+.payment-item__cost {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%;
+  color: #9e9da8;
+}
+.payment-item__checkbox {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 10px;
+}
+.payment-item__checkbox-input::before {
+  content: url(../../assets/icon/checkbox-uncheck-gray.svg);
   filter: none;
+}
+.payment-item__checkbox-input:checked + .payment-item__cost {
+  color: var(--text-color);
+}
+.payment-item__pointer {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=main.css.map */

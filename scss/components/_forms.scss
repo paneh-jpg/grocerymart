@@ -73,7 +73,7 @@
 
     padding: 0px 12px;
     border-radius: 10px;
-    border: 1.5px solid var(--text-input-border-color);
+    border: 1px solid var(--text-input-border-color);
 
     &:focus-within {
       border-color: #77dae6;
@@ -286,6 +286,7 @@
       font-weight: 500;
       line-height: 146.667%;
       color: var(--auth-desc-color);
+
       &::before,
       &::after {
         position: absolute;
