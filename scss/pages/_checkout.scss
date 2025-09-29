@@ -15,6 +15,9 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    @include abstracts.screen(sm) {
+      gap: 10px;
+    }
   }
 }
 
@@ -107,14 +110,25 @@
     font-weight: 500;
     line-height: 144.444%;
 
+    @include abstracts.screen(sm) {
+      font-size: 1.5rem;
+    }
+
     &--bold {
       font-size: 2.2rem;
       font-weight: 700;
       line-height: 145.455%;
+
+      @include abstracts.screen(sm) {
+        font-size: 1.5rem;
+      }
     }
 
     &--not-bold {
       font-weight: 400;
+      @include abstracts.screen(sm) {
+        font-size: 1.5rem;
+      }
     }
   }
 
@@ -139,6 +153,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 40px;
   }
 
   &__heading {
@@ -150,6 +165,10 @@
       font-size: 2.2rem;
       font-weight: 500;
       line-height: 145.455%;
+
+      @include abstracts.screen(sm) {
+        font-size: 1.6rem;
+      }
     }
   }
 
@@ -158,6 +177,10 @@
     font-size: 1.8rem;
     font-weight: 500;
     line-height: 144.444%;
+
+    @include abstracts.screen(sm) {
+      font-size: 1.5rem;
+    }
   }
 
   &__checkbox {
@@ -491,26 +514,56 @@
   align-items: center;
   gap: 20px;
 
+  @include abstracts.screen(sm) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px;
+  }
+
+  &__step {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+  }
+
   &__thumb {
+    margin-right: 20px;
     width: 75px;
     height: 59px;
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 20px 60px 10px var(--payment-item-thumb-shadow);
+
+    @include abstracts.screen(sm) {
+      margin-right: 16px;
+      width: 65px;
+      height: 51px;
+    }
   }
 
   &__content {
     flex: 1;
+    display: flex;
   }
 
   &__title {
     font-size: 1.8rem;
     font-weight: 500;
     line-height: 144.444%;
+
+    @include abstracts.screen(sm) {
+      font-size: 1.6rem;
+    }
   }
 
   &__desc {
     margin-top: 4px;
+    color: #9e9da8;
+
+    @include abstracts.screen(sm) {
+      font-size: 1.4rem;
+    }
   }
 
   &__desc,
@@ -539,6 +592,7 @@
     flex-direction: row-reverse;
     align-items: center;
     gap: 10px;
+    margin-left: 82px;
 
     &-input {
       &::before {
@@ -555,4 +609,8 @@
   &__pointer {
     cursor: pointer;
   }
+}
+
+.payment-item-2 {
+  flex-direction: row;
 }

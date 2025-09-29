@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -105,7 +105,7 @@
         <!-- Checkout Content  -->
         <div class="checkout-container">
           <div class="row gy-xl-3">
-            <div class="col-8 col-xl-12">
+            <div class="col-8 col-xl-8 col-lg-12">
               <div class="cart-info">
                 <div class="cart-info__top">
                   <h2 class="cart-info__heading cart-info__heading--lv2">
@@ -122,7 +122,7 @@
                 </div>
                 <!-- Payment Item 1 -->
                 <article class="payment-item">
-                  <div class="payment-item__content">
+                  <div class="payment-item__step">
                     <h3 class="payment-item__title">Imran Khan</h3>
                     <p class="payment-item__desc">
                       Museum of Rajas, Sylhet Sadar, Sylhet 3100.
@@ -131,7 +131,7 @@
                 </article>
                 <!-- Payment Item 2 -->
                 <article class="payment-item payment-item-2">
-                  <div class="payment-item__content">
+                  <div class="payment-item__step">
                     <h3 class="payment-item__title">Items details</h3>
                     <p class="payment-item__desc">2 items</p>
                   </div>
@@ -152,18 +152,19 @@
                 <!-- Payment Item 3 -->
                 <label>
                   <article class="payment-item payment-item__pointer">
-                    <img
-                      src="./assets/img/payment/payment-method-1.png"
-                      alt=""
-                      class="payment-item__thumb"
-                    />
                     <div class="payment-item__content">
-                      <h3 class="payment-item__title">Fedex Delivery</h3>
-                      <p class="payment-item__desc payment-item__desc--low">
-                        Delivery: 2-3 days work
-                      </p>
+                      <img
+                        src="./assets/img/payment/payment-method-1.png"
+                        alt=""
+                        class="payment-item__thumb"
+                      />
+                      <div class="payment-item__info">
+                        <h3 class="payment-item__title">Fedex Delivery</h3>
+                        <p class="payment-item__desc payment-item__desc--low">
+                          Delivery: 2-3 days work
+                        </p>
+                      </div>
                     </div>
-
                     <!-- Custom checkbox -->
                     <span class="cart-info__checkbox payment-item__checkbox">
                       <input
@@ -179,16 +180,18 @@
                 <!-- Payment Item 4 -->
                 <label>
                   <article class="payment-item payment-item__pointer">
-                    <img
-                      src="./assets/img/payment/payment-method-2.png"
-                      alt=""
-                      class="payment-item__thumb"
-                    />
                     <div class="payment-item__content">
-                      <h3 class="payment-item__title">DHL Delivery</h3>
-                      <p class="payment-item__desc payment-item__desc--low">
-                        Delivery: 2-3 days work
-                      </p>
+                      <img
+                        src="./assets/img/payment/payment-method-2.png"
+                        alt=""
+                        class="payment-item__thumb"
+                      />
+                      <div class="payment-item__info">
+                        <h3 class="payment-item__title">DHL Delivery</h3>
+                        <p class="payment-item__desc payment-item__desc--low">
+                          Delivery: 2-3 days work
+                        </p>
+                      </div>
                     </div>
                     <!-- Custom checkbox -->
                     <span class="cart-info__checkbox payment-item__checkbox">
@@ -203,7 +206,7 @@
                 </label>
               </div>
             </div>
-            <div class="col-4 col-xl-12">
+            <div class="col-4 col-xl-4 col-lg-12">
               <div class="cart-info">
                 <h2 class="cart-info__heading cart-info__heading--lv2">
                   Payment Details
