@@ -1729,7 +1729,7 @@ select:-webkit-autofill:hover {
   width: min(300px, 100vw);
 }
 .top-act__dropdown-arrow {
-  right: 7px;
+  right: 10px;
   top: -14px;
 }
 
@@ -2782,6 +2782,7 @@ select:-webkit-autofill:hover {
   left: 10px;
   min-width: 230px;
   max-height: 300px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   opacity: 0;
@@ -3542,8 +3543,8 @@ html.dark {
   --text-content-hr-bg: #414349;
   --act-dropdown-bg: #292e39;
   --act-dropdown-shadow: rgba(23, 28, 40, 0.4);
-  --arrow-up: brightness(0) saturate(100%) invert(12%) sepia(6%) saturate(2506%)
-    hue-rotate(184deg) brightness(101%) contrast(86%);
+  --arrow-up: brightness(0) saturate(100%) invert(16%) sepia(27%) saturate(403%)
+    hue-rotate(183deg) brightness(94%) contrast(94%);
   --checkout-bg-color: #171c28;
   --checkout-shadow: rgba(23, 28, 40, 0.2);
   --cart-item-input-text-color: #b9babe;
