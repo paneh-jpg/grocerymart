@@ -4939,5 +4939,8 @@ html {
     margin-top: 16px;
   }
 }
+.add-new-card__actions .btn--primary {
+  color: #1a162e;
+}
 
 /*# sourceMappingURL=main.css.map */
