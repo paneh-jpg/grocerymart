@@ -3296,7 +3296,6 @@ select:-webkit-autofill:hover {
   transition: box-shadow 0.5s;
 }
 .new-card:hover {
-  box-shadow: rgba(232, 223, 223, 0.4) 0px 2px 4px, rgba(222, 202, 202, 0.3) 0px 7px 13px -3px, rgba(231, 222, 222, 0.2) 0px -3px 0px inset;
   box-shadow: var(--new-card-shadow);
 }
 .new-card__text {
@@ -3307,6 +3306,86 @@ select:-webkit-autofill:hover {
 }
 .new-card__icon {
   filter: var(--new-card-icon);
+}
+
+.account-info {
+  width: 100%;
+  border-radius: 10px;
+  background: var(--account-info-bg);
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+}
+.account-info__icon-wrap {
+  flex-shrink: 0;
+  width: 54px;
+  height: 54px;
+  border-radius: 8px;
+  background: var(--account-info-icon-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.account-info__icon {
+  width: 24px;
+  height: 24px;
+}
+.account-info__heading {
+  margin-top: 14px;
+}
+.account-info__pb {
+  margin-bottom: 16px;
+}
+.account-info__title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 146.667%;
+}
+.account-info__desc {
+  margin-top: 6px;
+  font-size: 1.4rem;
+  line-height: 142.857%;
+}
+
+.favorite-item {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.favorite-item__thumb {
+  width: 151px;
+  height: 108px;
+  object-fit: contain;
+}
+.favorite-item__title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 146.667%;
+}
+.favorite-item__content {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.favorite-item__price {
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 145.455%;
+}
+.favorite-item__btn {
+  width: 126px;
+  height: 42px;
+  color: #1a162e;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 146.667%;
+}
+.favorite-item__separate {
+  height: 1px;
+  margin: 20px 0 4px 0;
+  background: var(--new-card_border-color);
 }
 
 html.dark {
@@ -3385,6 +3464,8 @@ html.dark {
     saturate(206%) hue-rotate(191deg) brightness(85%) contrast(90%);
   --new-card-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  --account-info-bg: #292e39;
+  --account-info-icon-bg: #171c28;
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -3477,6 +3558,8 @@ html {
   --new-card-shadow: rgba(232, 223, 223, 0.4) 0px 2px 4px,
     rgba(222, 202, 202, 0.3) 0px 7px 13px -3px,
     rgba(231, 222, 222, 0.2) 0px -3px 0px inset;
+  --account-info-bg: #f6f6f6;
+  --account-info-icon-bg: #fff;
 }
 @media (max-width: 991.98px) {
   html {
