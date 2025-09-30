@@ -1,0 +1,103 @@
+@use "../abstracts";
+
+.profile {
+  &-container {
+    margin: 30px 0;
+  }
+
+  &__sidebar {
+    border-radius: 20px;
+    background: var(--sidebar-bg);
+    box-shadow: 0 20px 60px 10px var(--sidebar-shadow);
+    overflow: hidden;
+    padding-bottom: 30px;
+  }
+
+  //User
+  &-user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(
+        180deg,
+        rgba(26, 22, 46, 0) 0%,
+        #1a162e 100%
+      ),
+      url(../../assets/img/profile/cover-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &__avatar {
+      width: 116px;
+      height: 116px;
+      border-radius: 100%;
+      border: 5px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 4px 14px 2px rgba(0, 0, 0, 0.08);
+      margin-top: 40px;
+      background: linear-gradient(lightgray, lightgray) -475.937px -52.524px /
+          819.939% 546.626% no-repeat,
+        #dfd2fa;
+      background-clip: content-box;
+    }
+
+    &__name {
+      color: #fff;
+      margin-top: 15px;
+      font-size: 1.8rem;
+      font-weight: 700;
+      line-height: 144.444%;
+    }
+
+    &__desc {
+      color: #fff;
+      margin-top: 2px;
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+      font-weight: 500;
+      line-height: 146.667%;
+    }
+  }
+
+  //Menu
+  &-menu {
+    margin-top: 30px;
+    padding: 0 30px;
+
+    &__title {
+      font-size: 1.8rem;
+      font-weight: 500;
+      line-height: 144.444%;
+    }
+
+    &__list {
+      margin-top: 11px;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    &__icon {
+      width: 22px;
+      height: 22px;
+    }
+
+    &__link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      height: 32px;
+      border-radius: 8px;
+      padding: 0 4px;
+
+      font-size: 1.5rem;
+      line-height: 146.667%;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.08);
+      }
+    }
+  }
+}
+
+//End Profile

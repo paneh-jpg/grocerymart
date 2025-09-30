@@ -103,6 +103,10 @@ html.dark {
   --payment-item-bg: #292e39;
   --payment-item-thumb-shadow: none;
 
+  //Profile
+  --sidebar-bg: #171c28;
+  --sidebar-shadow: rgba(23, 28, 40, 0.2);
+
   @include abstracts.screen(lg) {
     --header-shadow-color: rgba(0, 0, 0, 0.2);
   }

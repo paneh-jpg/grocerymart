@@ -3271,6 +3271,8 @@ html.dark {
     sepia(0%) saturate(0%) hue-rotate(338deg) brightness(111%) contrast(101%);
   --payment-item-bg: #292e39;
   --payment-item-thumb-shadow: none;
+  --sidebar-bg: #171c28;
+  --sidebar-shadow: rgba(23, 28, 40, 0.2);
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -3354,6 +3356,9 @@ html {
     sepia(6%) saturate(7490%) hue-rotate(213deg) brightness(99%) contrast(95%);
   --payment-item-bg: #f6f6f6;
   --payment-item-thumb-shadow: rgba(237, 237, 246, 0.2);
+  --sidebar-bg: #fff;
+  --sidebar-shadow: rgba(237, 237, 246, 0.2);
+  --profile-user-avatar-border-color: rgba(255, 255, 255, 0.2);
 }
 @media (max-width: 991.98px) {
   html {
@@ -4591,6 +4596,83 @@ html {
   .cart-info__cart-item-ctrl {
     margin-top: 16px;
   }
+}
+
+.profile-container {
+  margin: 30px 0;
+}
+.profile__sidebar {
+  border-radius: 20px;
+  background: var(--sidebar-bg);
+  box-shadow: 0 20px 60px 10px var(--sidebar-shadow);
+  overflow: hidden;
+  padding-bottom: 30px;
+}
+.profile-user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(180deg, rgba(26, 22, 46, 0) 0%, #1a162e 100%), url(../../assets/img/profile/cover-img.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.profile-user__avatar {
+  width: 116px;
+  height: 116px;
+  border-radius: 100%;
+  border: 5px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 14px 2px rgba(0, 0, 0, 0.08);
+  margin-top: 40px;
+  background: linear-gradient(lightgray, lightgray) -475.937px -52.524px/819.939% 546.626% no-repeat, #dfd2fa;
+  background-clip: content-box;
+}
+.profile-user__name {
+  color: #fff;
+  margin-top: 15px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 144.444%;
+}
+.profile-user__desc {
+  color: #fff;
+  margin-top: 2px;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 146.667%;
+}
+.profile-menu {
+  margin-top: 30px;
+  padding: 0 30px;
+}
+.profile-menu__title {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%;
+}
+.profile-menu__list {
+  margin-top: 11px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.profile-menu__icon {
+  width: 22px;
+  height: 22px;
+}
+.profile-menu__link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 32px;
+  border-radius: 8px;
+  padding: 0 4px;
+  font-size: 1.5rem;
+  line-height: 146.667%;
+}
+.profile-menu__link:hover {
+  background-color: rgba(0, 0, 0, 0.08);
 }
 
 /*# sourceMappingURL=main.css.map */

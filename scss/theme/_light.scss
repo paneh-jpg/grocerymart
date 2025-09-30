@@ -104,6 +104,11 @@ html {
   --payment-item-bg: #f6f6f6;
   --payment-item-thumb-shadow: rgba(237, 237, 246, 0.2);
 
+  //Profile
+  --sidebar-bg: #fff;
+  --sidebar-shadow: rgba(237, 237, 246, 0.2);
+  --profile-user-avatar-border-color: rgba(255, 255, 255, 0.2);
+
   @include abstracts.screen(lg) {
     --header-bg-color: #fff;
     --header-shadow-color: rgba(237, 237, 246, 0.2);
