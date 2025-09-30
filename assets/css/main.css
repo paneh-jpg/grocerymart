@@ -1629,7 +1629,6 @@ select:-webkit-autofill:hover {
   margin-bottom: 30px;
 }
 .act-dropdown__title {
-  color: var(--auth-heading-color);
   font-size: 2.2rem;
   font-weight: 500;
   line-height: 145.455%;
@@ -1670,6 +1669,7 @@ select:-webkit-autofill:hover {
 .act-dropdown__row--bold .act-dropdown__label,
 .act-dropdown__row--bold .act-dropdown__value {
   font-weight: 500;
+  color: var(--text-color);
 }
 .act-dropdown__checkout {
   display: flex;
@@ -1706,7 +1706,7 @@ select:-webkit-autofill:hover {
 }
 .cart-preview-item__title {
   margin-top: 14px;
-  color: var(--auth-intro-text-color);
+  font-weight: 500;
   font-size: 1.4rem;
   line-height: 142.857%;
 }
@@ -2445,9 +2445,12 @@ select:-webkit-autofill:hover {
   object-fit: contain;
 }
 .product-card__like-btn {
+  flex-shrink: 0;
   position: absolute;
-  right: 0;
+  right: -3px;
   bottom: 0;
+  width: 40px;
+  height: 40px;
 }
 .product-card__title {
   margin-top: 10px;
@@ -3532,7 +3535,7 @@ html.dark {
   --product-detail-bg: #292e39;
   --prod-prop-form__tag-bg: #292e39;
   --product-container-bg: #171c28;
-  --prod-prop-heading-color: #171c28;
+  --prod-prop-heading-color: #fff;
   --review-card-bg: #171c28;
   --breadcrumb-bg: #171c28;
   --breadcrumb-shadow: rgba(23, 28, 40, 0.2);

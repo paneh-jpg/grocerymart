@@ -27,9 +27,12 @@
   }
 
   &__like-btn {
+    flex-shrink: 0;
     position: absolute;
-    right: 0;
+    right: -3px;
     bottom: 0;
+    width: 40px;
+    height: 40px;
   }
 
   &__title {
