@@ -127,7 +127,7 @@
     justify-content: flex-end;
     margin-top: 32px;
 
-    @include abstracts.screen(sm) {
+    @include abstracts.screen(md) {
       justify-content: center;
       margin-top: 16px;
     }

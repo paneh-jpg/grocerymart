@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Add new card | Grocery Mart</title>
+    <title>Edit information | Grocery Mart</title>
 
     <!-- Favicon  -->
     <link
@@ -80,10 +80,7 @@
                   <h3 class="profile-menu__title">Manage Account</h3>
                   <ul class="profile-menu__list">
                     <li>
-                      <a
-                        href="./edit-person-info.html"
-                        class="profile-menu__link"
-                      >
+                      <a href="#!" class="profile-menu__link">
                         <span class="profile-menu__icon">
                           <img
                             src="./assets/icon/profile.svg"
@@ -215,19 +212,16 @@
             <div class="col-9 col-xl-8 col-lg-12 col-md-12">
               <div class="cart-info">
                 <div class="row gy-3">
-                  <!-- Payment Card -->
-
                   <div class="col-12">
                     <a href="./profile.html">
+                      <!-- Payment Card -->
                       <div class="add-new-card__top">
                         <img
                           src="./assets/icon/arrow-to-left.svg"
                           alt=""
                           class="icon"
                         />
-                        <h2 class="cart-info__heading--lv2">
-                          Add credit or debit card
-                        </h2>
+                        <h2 class="cart-info__heading--lv2">Personal info</h2>
                       </div>
                     </a>
                     <form action="" class="form">
@@ -237,14 +231,14 @@
                             for="first-name"
                             class="form__label form__label--medium"
                           >
-                            First Name
+                            Full name
                           </label>
                           <div class="form__group form__group--medium">
                             <div class="form__text-input">
                               <input
                                 type="text"
                                 name=""
-                                placeholder="Imran"
+                                placeholder="Imran Khan"
                                 id="first-name"
                                 class="form__input"
                                 required
@@ -264,14 +258,14 @@
                             for="last-name"
                             class="form__label form__label--medium"
                           >
-                            Last Name
+                            Email address
                           </label>
                           <div class="form__group form__group--medium">
                             <div class="form__text-input">
                               <input
                                 type="text"
                                 name="last-name"
-                                placeholder="Khan"
+                                placeholder="admin@uihut.com"
                                 id="last-name"
                                 class="form__input"
                                 required
@@ -293,14 +287,14 @@
                             for="card-info"
                             class="form__label form__label--medium"
                           >
-                            Card Information
+                            Phone number
                           </label>
                           <div class="form__group form__group--medium">
                             <div class="form__text-input">
                               <input
                                 type="text"
                                 name="card-info"
-                                placeholder="Card Number"
+                                placeholder="+008 01234 56789"
                                 id="card-info"
                                 class="form__input"
                                 required
@@ -320,14 +314,14 @@
                             for="expire-date"
                             class="form__label form__label--medium"
                           >
-                            Expiration Date
+                            Password
                           </label>
                           <div class="form__group form__group--medium">
                             <div class="form__text-input">
                               <input
-                                type="text"
+                                type="password"
                                 name=""
-                                placeholder="MM/YY"
+                                placeholder="•••••••••"
                                 id="expire-date"
                                 class="form__input"
                                 minlength="5"
@@ -342,84 +336,13 @@
                           </div>
                         </div>
                       </div>
-                      <div class="form__row">
-                        <div class="form__group add-new-card__from-group">
-                          <label
-                            for="cvv-number"
-                            class="form__label form__label--medium"
-                          >
-                            CVV
-                          </label>
-                          <div class="form__group form__group--medium">
-                            <div class="form__text-input">
-                              <input
-                                type="text"
-                                name=""
-                                placeholder="123"
-                                id="cvv-number"
-                                class="form__input"
-                                minlength="3"
-                                required
-                              />
-                              <img
-                                src="./assets/icon/warning.svg"
-                                alt=""
-                                class="form__error-icon form__pull-right"
-                              />
-                            </div>
-                            <p class="form__error">Warning notification!</p>
-                          </div>
-                        </div>
-                        <div class="form__group add-new-card__from-group">
-                          <label
-                            for="phone-number"
-                            class="form__label form__label--medium"
-                          >
-                            Phone Number
-                          </label>
-                          <div class="form__group form__group--medium">
-                            <div class="form__text-input">
-                              <input
-                                type="text"
-                                name=""
-                                placeholder="017 866 766"
-                                id="phone-number"
-                                class="form__input"
-                                required
-                                minlength="10"
-                              />
-                              <img
-                                src="./assets/icon/warning.svg"
-                                alt=""
-                                class="form__error-icon form__pull-right"
-                              />
-                            </div>
-                            <p class="form__error">Warning notification!</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="form__group add-new-card__bottom">
-                        <p for="" class="form__label form__label--medium">
-                          Card Preferences
-                        </p>
-                        <label class="form__checkbox">
-                          <input
-                            type="checkbox"
-                            name=""
-                            id=""
-                            class="form__checkbox-input d-none"
-                          />
-                          <span class="form__checkbox-label"
-                            >Set as default card</span
-                          >
-                        </label>
-                      </div>
+
                       <div class="add-new-card__actions">
                         <button class="btn btn--outline btn--rounded">
                           Cancel
                         </button>
                         <button class="btn btn--primary btn--rounded">
-                          Save Card
+                          Save Edit
                         </button>
                       </div>
                     </form>
