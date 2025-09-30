@@ -1740,8 +1740,9 @@ select:-webkit-autofill:hover {
 }
 @media (max-width: 575.98px) {
   .footer__row {
-    grid-template-columns: 1fr 1fr;
-    gap: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
   }
 }
 @media (max-width: 991.98px) {
@@ -1820,7 +1821,7 @@ select:-webkit-autofill:hover {
   color: var(--footer-text-color);
 }
 .footer__label {
-  margin-top: 20px;
+  margin-top: 10px;
   font-weight: 500;
   font-size: 1.6rem;
 }
@@ -1864,7 +1865,7 @@ select:-webkit-autofill:hover {
   align-items: center;
   justify-content: space-between;
 }
-@media (max-width: 575.98px) {
+@media (max-width: 767.98px) {
   .footer__bottom {
     flex-direction: column-reverse;
     gap: 20px;
@@ -3206,7 +3207,7 @@ select:-webkit-autofill:hover {
   position: relative;
   margin-top: 16px;
   padding: 20px 20px 0 20px;
-  height: 100%;
+  min-height: 171px;
   color: #fff;
   border-radius: 10px;
   background: var(--bg-color);
@@ -3285,7 +3286,7 @@ select:-webkit-autofill:hover {
 
 .new-card {
   margin-top: 16px;
-  height: 100%;
+  min-height: 171px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -3342,6 +3343,7 @@ select:-webkit-autofill:hover {
   line-height: 146.667%;
 }
 .account-info__desc {
+  color: var(--cart-item-input-text-color);
   margin-top: 6px;
   font-size: 1.4rem;
   line-height: 142.857%;
@@ -3353,10 +3355,21 @@ select:-webkit-autofill:hover {
   align-items: center;
   gap: 20px;
 }
+@media (max-width: 575.98px) {
+  .favorite-item {
+    align-items: flex-start;
+  }
+}
 .favorite-item__thumb {
   width: 151px;
   height: 108px;
   object-fit: contain;
+}
+@media (max-width: 991.98px) {
+  .favorite-item__thumb {
+    width: 100px;
+    height: auto;
+  }
 }
 .favorite-item__title {
   font-size: 1.5rem;
@@ -3369,7 +3382,15 @@ select:-webkit-autofill:hover {
   align-items: center;
   gap: 20px;
 }
+@media (max-width: 575.98px) {
+  .favorite-item__content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
 .favorite-item__price {
+  color: var(--cart-item-input-text-color);
   font-size: 2.2rem;
   font-weight: 500;
   line-height: 145.455%;
@@ -3381,6 +3402,12 @@ select:-webkit-autofill:hover {
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 146.667%;
+}
+@media (max-width: 575.98px) {
+  .favorite-item__btn {
+    width: 120px;
+    height: 40px;
+  }
 }
 .favorite-item__separate {
   height: 1px;
@@ -3457,6 +3484,7 @@ html.dark {
     sepia(0%) saturate(0%) hue-rotate(338deg) brightness(111%) contrast(101%);
   --payment-item-bg: #292e39;
   --payment-item-thumb-shadow: none;
+  --profile-link-hover-bg: rgb(230 193 193 / 8%);
   --sidebar-bg: #171c28;
   --sidebar-shadow: rgba(23, 28, 40, 0.2);
   --new-card_border-color: #b9babe;
@@ -3552,6 +3580,7 @@ html {
   --sidebar-bg: #fff;
   --sidebar-shadow: rgba(237, 237, 246, 0.2);
   --profile-user-avatar-border-color: rgba(255, 255, 255, 0.2);
+  --profile-link-hover-bg: rgba(0, 0, 0, 0.08);
   --new-card_border-color: #d2d1d6;
   --new-card-icon: brightness(0) saturate(100%) invert(0%) sepia(1%)
     saturate(1200%) hue-rotate(78deg) brightness(91%) contrast(97%);
@@ -4873,7 +4902,7 @@ html {
   line-height: 146.667%;
 }
 .profile-menu__link:hover {
-  background-color: rgba(0, 0, 0, 0.08);
+  background-color: var(--profile-link-hover-bg);
 }
 
 /*# sourceMappingURL=main.css.map */

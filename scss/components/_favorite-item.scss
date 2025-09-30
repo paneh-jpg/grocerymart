@@ -1,0 +1,69 @@
+@use "../abstracts";
+
+.favorite-item {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  @include abstracts.screen(sm) {
+    align-items: flex-start;
+  }
+
+  &__thumb {
+    width: 151px;
+    height: 108px;
+    object-fit: contain;
+
+    @include abstracts.screen(lg) {
+      width: 100px;
+      height: auto;
+    }
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 146.667%;
+  }
+
+  &__content {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    @include abstracts.screen(sm) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  }
+
+  &__price {
+    color: var(--cart-item-input-text-color);
+    font-size: 2.2rem;
+    font-weight: 500;
+    line-height: 145.455%;
+  }
+
+  &__btn {
+    width: 126px;
+    height: 42px;
+
+    color: #1a162e;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 146.667%;
+
+    @include abstracts.screen(sm) {
+      width: 120px;
+      height: 40px;
+    }
+  }
+
+  &__separate {
+    height: 1px;
+    margin: 20px 0 4px 0;
+    background: var(--new-card_border-color);
+  }
+}

@@ -20,8 +20,9 @@
     }
 
     @include abstracts.screen(sm) {
-      grid-template-columns: 1fr 1fr;
-      gap: 30px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
     }
   }
 
@@ -114,7 +115,7 @@
   }
 
   &__label {
-    margin-top: 20px;
+    margin-top: 10px;
     font-weight: 500;
     font-size: 1.6rem;
   }
@@ -160,7 +161,7 @@
     align-items: center;
     justify-content: space-between;
 
-    @include abstracts.screen(sm) {
+    @include abstracts.screen(md) {
       flex-direction: column-reverse;
       gap: 20px;
     }
