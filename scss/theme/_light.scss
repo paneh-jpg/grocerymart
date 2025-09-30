@@ -108,6 +108,12 @@ html {
   --sidebar-bg: #fff;
   --sidebar-shadow: rgba(237, 237, 246, 0.2);
   --profile-user-avatar-border-color: rgba(255, 255, 255, 0.2);
+  --new-card_border-color: #d2d1d6;
+  --new-card-icon: brightness(0) saturate(100%) invert(0%) sepia(1%)
+    saturate(1200%) hue-rotate(78deg) brightness(91%) contrast(97%);
+  --new-card-shadow: rgba(232, 223, 223, 0.4) 0px 2px 4px,
+    rgba(222, 202, 202, 0.3) 0px 7px 13px -3px,
+    rgba(231, 222, 222, 0.2) 0px -3px 0px inset;
 
   @include abstracts.screen(lg) {
     --header-bg-color: #fff;

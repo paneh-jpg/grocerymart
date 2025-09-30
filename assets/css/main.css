@@ -3202,6 +3202,113 @@ select:-webkit-autofill:hover {
   color: #1a162e;
 }
 
+.payment-card {
+  position: relative;
+  margin-top: 16px;
+  padding: 20px 20px 0 20px;
+  height: 100%;
+  color: #fff;
+  border-radius: 10px;
+  background: var(--bg-color);
+  overflow: hidden;
+  user-select: none;
+  transition: box-shadow 0.5s;
+}
+.payment-card:hover {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.payment-card__img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  pointer-events: none;
+}
+.payment-card__top {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.payment-card__type {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 142.857%;
+}
+.payment-card__number {
+  position: relative;
+  z-index: 1;
+  margin-top: 37px;
+  font-feature-settings: "liga" off, "clig" off;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%;
+}
+.payment-card__bottom {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.payment-card__label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 175%;
+}
+.payment-card__value {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 140%;
+}
+.payment-card__circle {
+  position: relative;
+  margin-left: auto;
+  padding: 0 20px 20px 0;
+}
+.payment-card__circle::before, .payment-card__circle::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+}
+.payment-card__circle::before {
+  background: #f94545;
+  z-index: 1;
+  mix-blend-mode: hard-light;
+  right: 10px;
+}
+.payment-card__circle::after {
+  background: #ffb700;
+  left: 0;
+}
+
+.new-card {
+  margin-top: 16px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  border-radius: 10px;
+  border: 1px dashed var(--new-card_border-color);
+  transition: box-shadow 0.5s;
+}
+.new-card:hover {
+  box-shadow: rgba(232, 223, 223, 0.4) 0px 2px 4px, rgba(222, 202, 202, 0.3) 0px 7px 13px -3px, rgba(231, 222, 222, 0.2) 0px -3px 0px inset;
+  box-shadow: var(--new-card-shadow);
+}
+.new-card__text {
+  color: var(--new-card_border-color);
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 142.857%;
+}
+.new-card__icon {
+  filter: var(--new-card-icon);
+}
+
 html.dark {
   --text-color: #fff;
   --icon-color: brightness(0) saturate(100%) invert(100%) sepia(8%)
@@ -3273,6 +3380,11 @@ html.dark {
   --payment-item-thumb-shadow: none;
   --sidebar-bg: #171c28;
   --sidebar-shadow: rgba(23, 28, 40, 0.2);
+  --new-card_border-color: #b9babe;
+  --new-card-icon: brightness(0) saturate(100%) invert(88%) sepia(4%)
+    saturate(206%) hue-rotate(191deg) brightness(85%) contrast(90%);
+  --new-card-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -3359,6 +3471,12 @@ html {
   --sidebar-bg: #fff;
   --sidebar-shadow: rgba(237, 237, 246, 0.2);
   --profile-user-avatar-border-color: rgba(255, 255, 255, 0.2);
+  --new-card_border-color: #d2d1d6;
+  --new-card-icon: brightness(0) saturate(100%) invert(0%) sepia(1%)
+    saturate(1200%) hue-rotate(78deg) brightness(91%) contrast(97%);
+  --new-card-shadow: rgba(232, 223, 223, 0.4) 0px 2px 4px,
+    rgba(222, 202, 202, 0.3) 0px 7px 13px -3px,
+    rgba(231, 222, 222, 0.2) 0px -3px 0px inset;
 }
 @media (max-width: 991.98px) {
   html {
