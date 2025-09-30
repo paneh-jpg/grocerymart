@@ -1820,6 +1820,11 @@ select:-webkit-autofill:hover {
 .footer__text, .footer__copyright {
   color: var(--footer-text-color);
 }
+@media (max-width: 575.98px) {
+  .footer__copyright {
+    font-size: 1.3rem;
+  }
+}
 .footer__label {
   margin-top: 10px;
   font-weight: 500;
@@ -2622,6 +2627,9 @@ select:-webkit-autofill:hover {
 .form__group {
   margin-top: 30px;
 }
+.form__group--medium {
+  margin-top: 20px;
+}
 .form__group--inline {
   display: flex;
   align-items: center;
@@ -2866,7 +2874,7 @@ select:-webkit-autofill:hover {
   background-color: #77dae6;
 }
 .form__checkbox:has(:checked) .form__checkbox-label::after {
-  left: -26px;
+  left: -25px;
   bottom: 8px;
   width: 12px;
   height: 7px;
@@ -4903,6 +4911,33 @@ html {
 }
 .profile-menu__link:hover {
   background-color: var(--profile-link-hover-bg);
+}
+.profile .form__checkbox:has(:checked) .form__checkbox-label::before {
+  border-color: #000;
+  background-color: #000;
+}
+
+.add-new-card__top, .add-new-card__bottom {
+  display: flex;
+}
+.add-new-card__top {
+  align-items: center;
+  gap: 10px;
+}
+.add-new-card__bottom {
+  flex-direction: column;
+  gap: 10px;
+}
+.add-new-card__actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 32px;
+}
+@media (max-width: 575.98px) {
+  .add-new-card__actions {
+    justify-content: center;
+    margin-top: 16px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

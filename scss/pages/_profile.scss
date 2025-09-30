@@ -98,5 +98,38 @@
       }
     }
   }
+
+  .form__checkbox:has(:checked) .form__checkbox-label::before {
+    border-color: #000;
+    background-color: #000;
+  }
 }
 //End Profile
+
+.add-new-card {
+  &__top,
+  &__bottom {
+    display: flex;
+  }
+
+  &__top {
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__bottom {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 32px;
+
+    @include abstracts.screen(sm) {
+      justify-content: center;
+      margin-top: 16px;
+    }
+  }
+}

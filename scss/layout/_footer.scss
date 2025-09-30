@@ -114,6 +114,12 @@
     color: var(--footer-text-color);
   }
 
+  &__copyright {
+    @include abstracts.screen(sm) {
+      font-size: 1.3rem;
+    }
+  }
+
   &__label {
     margin-top: 10px;
     font-weight: 500;

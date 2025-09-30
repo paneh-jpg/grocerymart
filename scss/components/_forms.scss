@@ -27,6 +27,10 @@
   &__group {
     margin-top: 30px;
 
+    &--medium {
+      margin-top: 20px;
+    }
+
     &--inline {
       display: flex;
       align-items: center;
@@ -316,7 +320,7 @@
     }
 
     .form__checkbox-label::after {
-      left: -26px;
+      left: -25px;
       bottom: 8px;
       width: 12px;
       height: 7px;
