@@ -1718,6 +1718,66 @@ select:-webkit-autofill:hover {
   line-height: 146.667%;
 }
 
+.top-act__user {
+  position: relative;
+}
+.top-act__user:hover .act-dropdown {
+  display: block;
+}
+.top-act__dropdown {
+  right: -10px;
+  width: min(300px, 100vw);
+}
+.top-act__dropdown-arrow {
+  right: 7px;
+  top: -14px;
+}
+
+.user-menu {
+  padding: 0 0 20px 0;
+}
+.user-menu__top {
+  padding: 30px 30px 0 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.user-menu__avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.user-menu__name {
+  font-weight: 600;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+.user-menu__username {
+  font-style: oblique;
+}
+.user-menu__list {
+  margin-top: 30px;
+}
+.user-menu__link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 30px;
+}
+.user-menu__link:hover {
+  background-color: var(--profile-link-hover-bg);
+}
+.user-menu__separate {
+  border-top: 1px solid var(--top-act-group-separate);
+  margin-top: 10px;
+  padding-top: 10px;
+}
+.user-menu__icon {
+  width: 20px;
+  height: 20px;
+}
+
 .footer {
   padding: 50px 0;
   font-size: 1.4rem;

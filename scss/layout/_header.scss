@@ -423,3 +423,76 @@
     line-height: 146.667%;
   }
 }
+
+.top-act {
+  &__user {
+    position: relative;
+    &:hover .act-dropdown {
+      display: block;
+    }
+  }
+
+  &__dropdown {
+    right: -10px;
+    width: min(300px, 100vw);
+  }
+
+  &__dropdown-arrow {
+    right: 7px;
+    top: -14px;
+  }
+}
+
+.user-menu {
+  padding: 0 0 20px 0;
+
+  &__top {
+    padding: 30px 30px 0 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  &__name {
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+
+  &__username {
+    font-style: oblique;
+  }
+
+  &__list {
+    margin-top: 30px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 30px;
+
+    &:hover {
+      background-color: var(--profile-link-hover-bg);
+    }
+  }
+
+  &__separate {
+    border-top: 1px solid var(--top-act-group-separate);
+    margin-top: 10px;
+    padding-top: 10px;
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+  }
+}
