@@ -1,8 +1,6 @@
 # GroceryMart
 Modern Responsive Ecommerce Website built with HTML & SCSS
 
-![GroceryMart Banner](https://github.com/paneh-jpg/grocerymart/blob/main/assets/banner.png?raw=true)
-
 ---
 
 ## 🚀 Live Demo
@@ -53,24 +51,23 @@ scss/
 ├── vendors/        # Third-party libraries
 └── main.scss       # Main Sass file
 
-📱 Responsive Breakpoints
+**📱 Responsive Breakpoints**
 // Example breakpoints
 $xl: 1200px;
 $lg: 992px;
 $md: 768px;
 $sm: 576px;
 
-📦 Clone Repository
+**📦 Clone Repository**
 git clone https://github.com/paneh-jpg/grocerymart.git
 cd grocerymart
 
-💡 Future Improvements
-
+**💡 Future Improvements**
 Add real product data via JSON API
 Add shopping cart system with JS
 Add login/register authentication
 Convert to React or Vue version
 Backend integration (Node.js)
 
-📝 License
+**📝 License**
 This project is open-source and free to use for educational purposes.
